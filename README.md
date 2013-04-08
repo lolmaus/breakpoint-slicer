@@ -134,7 +134,6 @@ With Breakpoint Slicer you can easily cycle through scices and apply column span
     .thumbnail {
       
       // Cycling through all slices
-      
       @for $i from 1 through $amount-of-slices {
 
         // Setting a media query for each slice
