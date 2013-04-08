@@ -45,7 +45,7 @@ Styles under `at(3)`        are applied when browser window width is inside the 
 
 Styles under `from(3)`      are applied when browser window width is inside the 3rd slice or larger.
 
-Styles under `to(3)`        are applied when browser window width is inside the 3rd slice or larger.
+Styles under `to(3)`        are applied when browser window width is inside the 3rd slice or smaller.
 
 Styles under `between(2,4)` are applied when browser window width is inside the 2nd, 4rd slice or any slice between the two (if any).
 
