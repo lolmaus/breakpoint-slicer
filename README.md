@@ -1,8 +1,20 @@
+<img alt="an egg slicer" src="http://i.imgur.com/GmQNEMG.jpg" align="right">
+
 Breakpoint Slicer
 =================
-<img alt="an egg slicer" src="http://i.imgur.com/GmQNEMG.jpg" style="float: right; margin: 0 0 2em 2em;">
 
-Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoint][1].
+Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoint][1]. It offers a powerful yet very simple way to slice your media queries.
+
+Just list your breakpoints and Breakpoint Slicer will magically turn them into slices. You can address the with their sequence numbers:
+
+    $slicer-breakpoints: 0 400px 600px 800px 1050px;
+    // Slice numbers:    |  1 |  2 |  3  |  4  |  5  →
+    
+    // Set a media query
+    @include at(3) {
+      // Styles inside here will be applied when
+      // browser window width is somewhere between 600px and 800px
+    }
 
 
 Concept
@@ -91,7 +103,7 @@ Code examples
 
 Enlist your breakpoints in the `$slicer-breakpoints` variable:
 
-    $slicer-breakpoints: 0 400px 600px 800px 1050px
+    $slicer-breakpoints: 0 400px 600px 800px 1050px;
 
 Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoint mixin:
 
@@ -132,9 +144,26 @@ With Breakpoint Slicer you can easily cycle through scices and apply column span
           @include span-columns(1, $context: $i); // Set the number of columns equal to the slice number
                                                   // and make each thumbnail one column wide.
           @include nth-omega(#{$i}n); }}}
-    
-      
-      
+          
+
+Retrieving breakpoints individually
+-----------------------------------
+
+Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a slice asked for. E. g. `bp(2)` would return `600px`. Effectively, `bp()` is a shortcut for `nth()`.
+
+[Singularity][2] is the most modern and versatile SASS grid system. It requires breakpoints to be provided [individually][3]:
+
+    // Define breakpoints in a Slicer list
+    $slicer-breakpoints: 0 400px 600px 800px 1050px;
+
+    // Define Singularity responsive grids
+    $grids: 3;
+    $grids: add-grid(6         at bp(2));
+    $grids: add-grid(12        at bp(3));
+    $grids: add-grid(2 8 2     at bp(4));
+    $grids: add-grid(1 3 5 7 9 at bp(5));
 
 
   [1]: https://github.com/Team-Sass/breakpoint
+  [2]: https://github.com/Team-Sass/Singularity
+  [3]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
