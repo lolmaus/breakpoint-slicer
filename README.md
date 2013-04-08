@@ -150,7 +150,7 @@ Retrieving breakpoints individually
 
 Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a slice asked for. E. g. `bp(2)` would return `600px`. Effectively, `bp()` is a shortcut for `nth()`.
 
-[Singularity][2] is the most modern and versatile SASS grid system. It requires breakpoints to be provided [individually][3]:
+[Singularity][2] is the most modern and versatile SASS grid system. It [requires][3] breakpoints to be provided individually:
 
     // Define breakpoints in a Slicer list
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
