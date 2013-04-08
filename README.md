@@ -86,7 +86,7 @@ Some mixins become synonomous when used for the last slice:
                                        ·               between(2, 5)
                                        ├─────────────────────────────────────────>
 
-And `to` becomes meaningless:
+…and `to` becomes meaningless:
 
      Breakpoint:   0                 400px     600px     800px       1050px
                    ├───────────────────┼─────────┼─────────┼───────────┼─────────>
