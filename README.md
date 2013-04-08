@@ -34,15 +34,27 @@ Styles under `from(3)`      are applied when browser window width is inside the 
 
 Styles under `to(3)`        are applied when browser window width is inside the 3rd slice or larger.
 
-Styles under `between(2,4)` are applied when browser window width is inside the 2nd, 4rd slice or any slice between the two.
+Styles under `between(2,4)` are applied when browser window width is inside the 2nd, 3rd slice or any slice between the two (if any).
 
 
 
 
 
-
-
-
+     Breakpoint:   0                 400px     600px     800px       1050px
+                   ├───────────────────┼─────────┼─────────┼───────────┼─────────>
+     Slice #:      ╎         1         ╎    2    ╎    3    ╎     4
+                   ╎                   ╎         ╎         ╎
+                   ╎                   ╎         ╎  at(3)  ╎
+                   ╎                   ╎         ├─────────┤
+                   ╎                   ╎         ╎         ╎
+                   ╎                   ╎         ╎ from(3) ╎
+                   ╎                   ╎         ├───────────────────────────────>
+                   ╎                   ╎                   ╎
+                   ╎                   ╎    between(2,3)   ╎
+                   ╎                   ├───────────────────┤
+                   ╎                                       ╎
+                   ╎                                to(3)  ╎
+                   ├───────────────────────────────────────┤
 
 
   [1]: https://github.com/Team-Sass/breakpoint
