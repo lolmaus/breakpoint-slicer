@@ -20,11 +20,11 @@ Breakpoint Slicer numbers the slices sequentially:
                    ├───────────────────┼─────────┼─────────┼───────────┼─────────>
      Slice #:                1              2         3          4          5
      
-The goal of breakpoint slicer is to let you quickly set breakpoints using those numbers instead of px/em values.
+The goal of Breakpoint Slicer is to let you quickly set breakpoints using these numbers instead of px/em values.
 
 
-Usage
------
+Mixins
+------
 
 Breakpoint Slicer offers four handy mixins that let you set breakpoint ranges easily: `at`, `from`, `to` and `between`:
 
@@ -84,6 +84,31 @@ And `to` becomes meaningless:
 
 Note that the max-width of your site's container should be somewhere in the fifth slice.
 
+
+Code examples
+-------------
+
+Enlist your breakpoints in the `$slicer-breakpoints` variable:
+
+    $slicer-breakpoints: 0 400px 600px 800px 1050px
+
+Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoint mixin:
+
+    .element {
+      @include at(2) {
+        // Code in this block will only be applied to .element
+        // when browser window width is between 400px and 600px.
+        background-color: red;
+        
+        // This is a mixin from Singularity
+        @include grid-span(2, 4); } }
+
+Slicer usage       | Breakpoint equivalent         | The resulting media query
+------------------ | ----------------------------- | ------------------------------------------
+at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
+from(2)            | breakpoint(400px)             | (min-width: 400px)
+to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
+between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
 
 
   [1]: https://github.com/Team-Sass/breakpoint
