@@ -1,5 +1,6 @@
 Breakpoint Slicer
 =================
+<img alt="an egg slicer" src="http://i.imgur.com/GmQNEMG.jpg" style="float: right; margin: 0 0 2em 2em;">
 
 Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoint][1].
 
@@ -103,12 +104,37 @@ Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoi
         // This is a mixin from Singularity
         @include grid-span(2, 4); } }
 
+Comparison between Breakpoint Slicer and Breakpoint for the breakpoints defined above:
+
 Slicer usage       | Breakpoint equivalent         | The resulting media query
 ------------------ | ----------------------------- | ------------------------------------------
 at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
 from(2)            | breakpoint(400px)             | (min-width: 400px)
 to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
 between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
+
+With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly:
+
+    $slicer-breakpoints: 0 400px 600px 800px 1050px;
+    $amount-of-slices:   length($slicer-breakpoints);
+
+    // Say we have a grid of thumbnails and we position them with nth-child
+    .thumbnail {
+      
+      // Cycling through all slices
+      
+      @for $i from 1 through $amount-of-slices {
+
+        // Setting a media query for each slice
+        @at($i) {
+
+          // Using the Susy grid framework
+          @include span-columns(1, $context: $i); // Set the number of columns equal to the slice number
+                                                  // and make each thumbnail one column wide.
+          @include nth-omega(#{$i}n); }}}
+    
+      
+      
 
 
   [1]: https://github.com/Team-Sass/breakpoint
