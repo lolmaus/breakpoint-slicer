@@ -163,6 +163,12 @@ Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a
     $grids: add-grid(1 3 5 7 9 at bp(5));
 
 
+Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
+----------------------------------------------------------------------
+
+Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc — use Breakpoint in a conventional way, Breakpoint Slicer won't interfere.
+
+
   [1]: https://github.com/Team-Sass/breakpoint
   [2]: https://github.com/Team-Sass/Singularity
   [3]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
