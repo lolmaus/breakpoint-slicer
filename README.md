@@ -66,6 +66,7 @@ Styles under `between(2,4)` are applied when browser window width is inside the 
                                        ·         between(2, 4)         ·
                                        ├───────────────────────────────┤
 
+Note that the max-width of your site's container should be somewhere in the fifth slice.
 
 ### Comparison between Breakpoint Slicer and vanilla Breakpoint
 
@@ -99,7 +100,7 @@ Some mixins become synonomous when used for the last slice:
                                        ·               between(2, 5)
                                        ├─────────────────────────────────────────>
 
-…and `to` becomes meaningless (in this case the media query is omitted):
+…and some become meaningless (in these cases media query is omitted):
 
      Breakpoint:   0                 400px     600px     800px       1050px
                    ├───────────────────┼─────────┼─────────┼───────────┼─────────>
@@ -107,8 +108,9 @@ Some mixins become synonomous when used for the last slice:
                    ·
                    ·                                                      to(5)
                    ├─────────────────────────────────────────────────────────────>
-
-Note that the max-width of your site's container should be somewhere in the fifth slice.
+                   ·
+                   ·      from(1)
+                   ├─────────────────────────────────────────────────────────────>
 
 
 ### Demo
