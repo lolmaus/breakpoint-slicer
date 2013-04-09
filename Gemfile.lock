@@ -1,0 +1,28 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    breakpoint (2.0.2)
+      compass (>= 0.12.1)
+      sass (>= 3.2.0)
+    breakpoint-slicer (0.1)
+      breakpoint (>= 2.0.1)
+      compass (>= 0.12.2)
+      sass (>= 3.2.1)
+    chunky_png (1.2.8)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    fssm (0.2.10)
+    sass (3.2.7)
+    singularitygs (1.0.6)
+      breakpoint (>= 2.0.1)
+      compass (>= 0.12.2)
+      sass (>= 3.2.1)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  breakpoint-slicer
+  singularitygs

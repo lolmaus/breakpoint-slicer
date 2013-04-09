@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Breakpoint Slicer test page</title>
+  <link rel=stylesheet href=css/style.css>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src=js/display-width.js></script>
+</head>
+<body>
+
+<h1>Breakpoint Slicer test</h1>
+
+<p>This is a test page for <a href=https://github.com/lolmaus/breakpoint-slicer>Breakpoint Slicer</a>.<br>
+  Please play with browser window width.<br>
+  Here's the SASS code behind this demo.</p>
+
+<h2>Page info</h2>
+<p>Current window width is <span id=window-width></span>px.</p>
+<p id=info-1></p>
+<p id=info-2></p>
+
+
+<h2>Testing mixins</h2>
+
+<p>The default color of each paragraph is light grey.<br>
+  Breakpoint Slicer is used to change the color<br>
+  to black at certain window widths.</p>
+
+<section class=demo>
+  <p id=at>+at(3)<br>&nbsp;&nbsp;background-color: black</p>
+  <p id=from>+from(3)<br>&nbsp;&nbsp;background-color: black</p>
+  <p id=to>+to(3)<br>&nbsp;&nbsp;background-color: black</p>
+  <p id=between>+between(2, 4)<br>&nbsp;&nbsp;background-color: black</p>
+</section>
+
+<h2>Leveraging Singularity</h2>
+
+<p>Breakpoint Slicer is used to set<br>
+  Singularity's breakpoints and to span the column.</p>
+
+<section class=demo>
+  <div id=singularity>
+    <div class=column><pre><span></span></pre></div>
+  </div>
+</section>
+
+
+</body>
+</html>
