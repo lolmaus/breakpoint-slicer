@@ -64,6 +64,16 @@ Styles under `between(2,4)` are applied when browser window width is inside the 
                                        ·         between(2, 4)         ·
                                        ├───────────────────────────────┤
 
+Comparison between Breakpoint Slicer and Breakpoint for the breakpoints defined above:
+
+Slicer usage       | Breakpoint equivalent         | The resulting media query
+------------------ | ----------------------------- | ------------------------------------------
+at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
+from(2)            | breakpoint(400px)             | (min-width: 400px)
+to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
+between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
+
+
 ### Edge cases
 
 Note that the last slice does not have a right edge. When it is invoked, the media query will have no max-width value.
@@ -132,15 +142,6 @@ Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoi
         
         // This is a mixin from Singularity
         @include grid-span(2, 4); } }
-
-Comparison between Breakpoint Slicer and Breakpoint for the breakpoints defined above:
-
-Slicer usage       | Breakpoint equivalent         | The resulting media query
------------------- | ----------------------------- | ------------------------------------------
-at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
-from(2)            | breakpoint(400px)             | (min-width: 400px)
-to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
-between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
 
 With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly:
 
