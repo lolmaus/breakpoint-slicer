@@ -202,7 +202,7 @@ It's very convenient to set the number of Singularity columns equal to the numbe
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
 ----------------------------------------------------------------------
 
-Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc — use Breakpoint in a conventional way, Breakpoint Slicer won't interfere.
+Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc, just use Breakpoint in a conventional way. Breakpoint Slicer won't interfere.
 
 You can even have different sets of min/max widths defined with Breakpoint Slicer and Respond To (or vanilla Breakpoint).
 
@@ -210,7 +210,7 @@ You can even have different sets of min/max widths defined with Breakpoint Slice
 Credit
 ------
 
-The initial idea of Breakpoint Slicer came when i (Andrey Mikhaylov aka lolmaus) got to know Susy and learned that the number of columns in a grid can be different for different browser widths. Susy gave me an idea that it's convenient to have a number of breakpoints and for each breakpoint the number of columns is equal to that breakpoint's number.
+The initial idea of Breakpoint Slicer came when i (Andrey Mikhaylov aka lolmaus) got to know Susy and learned that the number of columns in a grid can be different for different browser widths. Susy gave me an idea that it's convenient to have breakpoints listed sequentially and for each breakpoint the number of columns is set equal to that breakpoint's number in the list.
 
 This Compass extension was made possible with kind support from Eric Meyer, Sam Richard aka Snugug and Scott Kellum.
 
