@@ -3,6 +3,8 @@
 Breakpoint Slicer
 =================
 
+**Slice media queries with no effort**
+
 Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoint][1]. It offers a powerful yet very simple way to slice your media queries.
 
 Just list your breakpoints and Breakpoint Slicer will magically turn them into slices. You can address the with their sequence numbers:
@@ -64,7 +66,8 @@ Styles under `between(2,4)` are applied when browser window width is inside the 
                                        ·         between(2, 4)         ·
                                        ├───────────────────────────────┤
 
-Comparison between Breakpoint Slicer and vanilla Breakpoint:
+
+### Comparison between Breakpoint Slicer and vanilla Breakpoint
 
 Slicer usage       | Breakpoint equivalent         | The resulting media query
 ------------------ | ----------------------------- | ------------------------------------------
@@ -131,19 +134,27 @@ Code examples
 Enlist your breakpoints in the `$slicer-breakpoints` variable:
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
+    
+If you don't do that, defaults are used (these were the defaults).
 
-Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoint mixin:
+    
+### Basic usage
+
+Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoint mixins:
 
     .element {
       @include at(2) {
-        // Code in this block will only be applied to .element
+        // Code from this block will only be applied to .element
         // when browser window width is between 400px and 600px.
         background-color: red;
         
         // This is a mixin from Singularity
         @include grid-span(2, 4); } }
+        
 
-With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly:
+### Creating a responsive grid
+
+With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly. The example below makes use of [Susy][2].
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
     $amount-of-slices:   length($slicer-breakpoints);
@@ -163,12 +174,11 @@ With Breakpoint Slicer you can easily cycle through scices and apply column span
           @include nth-omega(#{$i}n); }}}
           
 
-Retrieving breakpoints individually
------------------------------------
+### Leveraging Singularity
+
+[Singularity][3] is the most modern and versatile SASS grid system. It [requires][4] breakpoints to be provided individually.
 
 Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a slice asked for. E. g. `bp(2)` would return `600px`. Effectively, `bp()` is a shortcut for `nth()`.
-
-[Singularity][2] is the most modern and versatile SASS grid system. It [requires][4] breakpoints to be provided individually:
 
     // Define breakpoints in a Slicer list
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
@@ -182,17 +192,40 @@ Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a
 
 It's very convenient to set the number of Singularity columns equal to the number of slices:
 
+    $slicer-breakpoints: 0 400px 600px 800px 1050px;
+    
     $grids: 1;
     @for $i from 2 through total-slices() {
       $grids: add-grid($i at bp($i)); }
+      
 
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
 ----------------------------------------------------------------------
 
 Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc — use Breakpoint in a conventional way, Breakpoint Slicer won't interfere.
 
+You can even have different sets of min/max widths defined with Breakpoint Slicer and Respond To (or vanilla Breakpoint).
+
+
+Credit
+------
+
+The initial idea of Breakpoint Slicer came when i (Andrey Mikhaylov aka lolmaus) got to know Susy and learned that the number of columns in a grid can be different for different browser widths. Susy gave me an idea that it's convenient to have a number of breakpoints and for each breakpoint the number of columns is equal to that breakpoint's number.
+
+This Compass extension was made possible with kind support from Eric Meyer, Sam Richard aka Snugug and Scott Kellum.
+
+
+License
+-------
+
+Licensed under MIT/GPL.
+
+- GPL2 license: http://www.gnu.org/licenses/gpl-2.0.html
+- MIT license: http://www.opensource.org/licenses/mit-license.php
+
 
   [1]: https://github.com/Team-Sass/breakpoint
-  [2]: https://github.com/Team-Sass/Singularity
-  [3]: http://gembundler.com/
+  [2]: http://susy.oddbird.net/
+  [3]: https://github.com/Team-Sass/Singularity
   [4]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
+
