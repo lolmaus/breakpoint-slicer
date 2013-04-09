@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/breakpoint-slicer.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/display-width.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/style.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="breakpoint-slicer.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365524288228" ignored="false" />
-    <file path="T:/platforms/drupal-6.28/sites/all/themes/bonuscasinos/.idea/workspace.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365527758971" ignored="false" />
-    <file path="/index.html" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365527749854" ignored="false" />
+    <file path="T:/platforms/drupal-6.28/sites/all/themes/bonuscasinos/.idea/workspace.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365528408637" ignored="false" />
+    <file path="/index.html" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365528403428" ignored="false" />
     <file path="/config.rb" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365526283783" ignored="false" />
     <file path="/style.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365526670368" ignored="false" />
     <file path="/display-width.js" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365527200536" ignored="false" />
@@ -63,7 +53,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="2" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.68164796">
+            <state line="14" column="92" selection-start="546" selection-end="546" vertical-scroll-proportion="0.30203044">
               <folding />
             </state>
           </provider>
@@ -239,7 +229,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="384" width="1296" height="1010" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -366,7 +356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="2" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.68164796">
+        <state line="14" column="92" selection-start="546" selection-end="546" vertical-scroll-proportion="0.30203044">
           <folding />
         </state>
       </provider>
