@@ -1,32 +1,14 @@
-// The dependency
+// The dependency.
 @import breakpoint-slicer
-
-// A mixin to turn elements black
-=black
-  background-color: black
-  color: white
-
-
-
-/////////////////////////////////////////
-// Showing the info
-/////////////////////////////////////////
-
-// Showing the breakpoints
-#info-1:after
-  content: "$slicer-breakpoints: #{$slicer-breakpoints}"
-
-// Showing the number of slices
-#info-2:after
-  @for $i from 1 through total-slices()
-    +at($i)
-      content: "This window currently fits #{$i} slices."
-
-
 
 /////////////////////////////////////////
 // Testing the mixins
 /////////////////////////////////////////
+
+// A mixin to turn elements black.
+=black
+  background-color: black
+  color: white
 
 #at
   +at(3)
@@ -45,58 +27,55 @@
     +black
 
 
-
 /////////////////////////////////////////
 // Breakpoint Slicer with Singularity
 /////////////////////////////////////////
 
-// Importing Singularity
-@import compass
+// Importing Singularity.
 @import singularitygs
 
-// Configuring Singularity
+// Configuring Singularity.
 $grids: 1
 $gutters: 0.2
 
-@for $i from 2 through total-slices() // Cycling through slices.
-  $grids: add-grid($i at bp($i))      // And setting number of columns in each slice
+// Adding responsive grids.
+@for $i from 2 through total-slices() // Cycling through slices
+  $grids: add-grid($i at bp($i))      // and setting number of columns in each slice
                                       // equal to the number of that slice.
-
-
-// Enabling the grid background
-#singularity
-  +background-grid
-  +pie-clearfix
-
 
 // Spanning the column
 #singularity .column
 
-  // Showing the text.
+  // This text will appear when no media queries are applied.
   span:after
     content: "This column is not spanned."
 
-  // Cycling through slices
+  // Cycling through slices.
   @for $i from 2 through total-slices()
 
-    // Setting a media query per slice
+    // Setting a media query per slice.
     +at($i)
 
-      // Setting the position to be the last-but-one column
+      // Setting the position to be the last-but-one column.
       $position: $i - 1
 
-      // Spanning
+      // Spanning.
       +grid-span(1, $position)
 
       // Showing the text.
       span:after
         content: "+at(#{$i})\A  +grid-span(1, #{$position})"
 
+// Enabling the grid background.
+#singularity
+  +background-grid
+  +pie-clearfix
 
 
 /////////////////////////////////////////
 // Styling
 /////////////////////////////////////////
+@import compass
 *
   +box-sizing(border-box)
 
@@ -114,3 +93,18 @@ h2
     padding: 1em
 
 
+/////////////////////////////////////////
+// Showing the info
+/////////////////////////////////////////
+
+// Showing the breakpoints.
+#info-1:after
+  content: "$slicer-breakpoints: #{$slicer-breakpoints}"
+
+// Showing the number of slices.
+#info-2:after
+  // Cycling through slices.
+  @for $i from 1 through total-slices()
+    // Setting a media query.
+    +at($i)
+      content: "This window currently fits #{$i} slices."

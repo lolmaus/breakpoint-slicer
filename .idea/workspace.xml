@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/style.sass" afterPath="$PROJECT_DIR$/sass/style.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="breakpoint-slicer.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365524288228" ignored="false" />
-    <file path="T:/platforms/drupal-6.28/sites/all/themes/bonuscasinos/.idea/workspace.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365528408637" ignored="false" />
+    <file path="T:/platforms/drupal-6.28/sites/all/themes/bonuscasinos/.idea/workspace.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365528877654" ignored="false" />
     <file path="/index.html" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365528403428" ignored="false" />
     <file path="/config.rb" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365526283783" ignored="false" />
-    <file path="/style.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365526670368" ignored="false" />
+    <file path="/style.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365528832929" ignored="false" />
     <file path="/display-width.js" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365527200536" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +54,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="92" selection-start="546" selection-end="546" vertical-scroll-proportion="0.30203044">
+            <state line="16" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.18020305">
               <folding />
             </state>
           </provider>
@@ -71,7 +72,7 @@
       <file leaf-file-name="style.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="26" selection-start="931" selection-end="931" vertical-scroll-proportion="-4.76">
+            <state line="109" column="57" selection-start="2177" selection-end="2177" vertical-scroll-proportion="-28.0">
               <folding />
             </state>
           </provider>
@@ -117,9 +118,9 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/sass/screen.sass" />
         <option value="$PROJECT_DIR$/config.rb" />
-        <option value="$PROJECT_DIR$/sass/style.sass" />
         <option value="$PROJECT_DIR$/js/display-width.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/sass/style.sass" />
       </list>
     </option>
   </component>
@@ -216,6 +217,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -340,13 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/style.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="26" selection-start="931" selection-end="931" vertical-scroll-proportion="-4.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/display-width.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="31" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
@@ -354,9 +355,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sass/style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="57" selection-start="2177" selection-end="2177" vertical-scroll-proportion="-28.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="92" selection-start="546" selection-end="546" vertical-scroll-proportion="0.30203044">
+        <state line="16" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="0.18020305">
           <folding />
         </state>
       </provider>
