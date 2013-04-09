@@ -64,7 +64,7 @@ Styles under `between(2,4)` are applied when browser window width is inside the 
                                        ·         between(2, 4)         ·
                                        ├───────────────────────────────┤
 
-Comparison between Breakpoint Slicer and Breakpoint for the breakpoints defined above:
+Comparison between Breakpoint Slicer and vanilla Breakpoint:
 
 Slicer usage       | Breakpoint equivalent         | The resulting media query
 ------------------ | ----------------------------- | ------------------------------------------
