@@ -46,7 +46,7 @@ $gutters: 0.2
   $grids: add-grid($i at bp($i))
 
 // Spanning the column
-#singularity .column
+#singularity1 .column
 
   // This text will appear when no media queries are applied.
   span:after
@@ -69,9 +69,31 @@ $gutters: 0.2
         content: "+at(#{$i})\A  +grid-span(1, #{$position})"
 
 // Enabling the grid background.
-#singularity
+.singularity
   +background-grid
   +pie-clearfix
+  margin-bottom: 1em
+
+
+/////////////////////////////////////////
+// Thumbnail grid with Singularity
+/////////////////////////////////////////
+
+#singularity2 .column
+  margin-bottom: 1em
+
+  // Cycling through slices
+  @for $slice from 2 through total-slices()
+
+    // Setting a media query for each slice
+    +at($slice)
+
+      // Within the media query, cycle through columns
+      @for $column from 1 through $slice
+
+        // Span thumbnails in this column
+        &:nth-child(#{$slice}n+#{$column})
+          +float-span(1, $column)
 
 
 /////////////////////////////////////////

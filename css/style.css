@@ -31,12 +31,12 @@
 }
 
 /* line 52, ../sass/style.sass */
-#singularity .column span:after {
+#singularity1 .column span:after {
   content: "This column is not spanned.";
 }
 @media (min-width: 400px) and (max-width: 600px) {
   /* line 49, ../sass/style.sass */
-  #singularity .column {
+  #singularity1 .column {
     width: 45.45455%;
     float: left;
     margin-right: -100%;
@@ -44,13 +44,13 @@
     clear: none;
   }
   /* line 68, ../sass/style.sass */
-  #singularity .column span:after {
+  #singularity1 .column span:after {
     content: "+at(2)\A  +grid-span(1, 1)";
   }
 }
 @media (min-width: 600px) and (max-width: 800px) {
   /* line 49, ../sass/style.sass */
-  #singularity .column {
+  #singularity1 .column {
     width: 29.41176%;
     float: left;
     margin-right: -100%;
@@ -58,13 +58,13 @@
     clear: none;
   }
   /* line 68, ../sass/style.sass */
-  #singularity .column span:after {
+  #singularity1 .column span:after {
     content: "+at(3)\A  +grid-span(1, 2)";
   }
 }
 @media (min-width: 800px) and (max-width: 1010px) {
   /* line 49, ../sass/style.sass */
-  #singularity .column {
+  #singularity1 .column {
     width: 21.73913%;
     float: left;
     margin-right: -100%;
@@ -72,13 +72,13 @@
     clear: none;
   }
   /* line 68, ../sass/style.sass */
-  #singularity .column span:after {
+  #singularity1 .column span:after {
     content: "+at(4)\A  +grid-span(1, 3)";
   }
 }
 @media (min-width: 1010px) {
   /* line 49, ../sass/style.sass */
-  #singularity .column {
+  #singularity1 .column {
     width: 17.24138%;
     float: left;
     margin-right: -100%;
@@ -86,23 +86,24 @@
     clear: none;
   }
   /* line 68, ../sass/style.sass */
-  #singularity .column span:after {
+  #singularity1 .column span:after {
     content: "+at(5)\A  +grid-span(1, 4)";
   }
 }
 
 /* line 72, ../sass/style.sass */
-#singularity {
+.singularity {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.5)));
   background-image: -webkit-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 100%);
   background-image: -moz-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 100%);
   background-image: -o-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 100%);
   background-image: linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 100%);
   *zoom: 1;
+  margin-bottom: 1em;
 }
 @media (min-width: 400px) {
   /* line 72, ../sass/style.sass */
-  #singularity {
+  .singularity {
     background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(210, 105, 30, 0.5)), color-stop(45.45455%, rgba(210, 105, 30, 0.5)), color-stop(45.45455%, rgba(210, 105, 30, 0.25)), color-stop(54.54545%, rgba(210, 105, 30, 0.25)), color-stop(54.54545%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.25)), color-stop(109.09091%, rgba(210, 105, 30, 0.25)));
     background-image: -webkit-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 45.45455%, rgba(210, 105, 30, 0.25) 45.45455%, rgba(210, 105, 30, 0.25) 54.54545%, rgba(210, 105, 30, 0.5) 54.54545%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 109.09091%);
     background-image: -moz-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 45.45455%, rgba(210, 105, 30, 0.25) 45.45455%, rgba(210, 105, 30, 0.25) 54.54545%, rgba(210, 105, 30, 0.5) 54.54545%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 109.09091%);
@@ -112,7 +113,7 @@
 }
 @media (min-width: 600px) {
   /* line 72, ../sass/style.sass */
-  #singularity {
+  .singularity {
     background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(210, 105, 30, 0.5)), color-stop(29.41176%, rgba(210, 105, 30, 0.5)), color-stop(29.41176%, rgba(210, 105, 30, 0.25)), color-stop(35.29412%, rgba(210, 105, 30, 0.25)), color-stop(35.29412%, rgba(210, 105, 30, 0.5)), color-stop(64.70588%, rgba(210, 105, 30, 0.5)), color-stop(64.70588%, rgba(210, 105, 30, 0.25)), color-stop(70.58824%, rgba(210, 105, 30, 0.25)), color-stop(70.58824%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.25)), color-stop(105.88235%, rgba(210, 105, 30, 0.25)));
     background-image: -webkit-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 29.41176%, rgba(210, 105, 30, 0.25) 29.41176%, rgba(210, 105, 30, 0.25) 35.29412%, rgba(210, 105, 30, 0.5) 35.29412%, rgba(210, 105, 30, 0.5) 64.70588%, rgba(210, 105, 30, 0.25) 64.70588%, rgba(210, 105, 30, 0.25) 70.58824%, rgba(210, 105, 30, 0.5) 70.58824%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 105.88235%);
     background-image: -moz-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 29.41176%, rgba(210, 105, 30, 0.25) 29.41176%, rgba(210, 105, 30, 0.25) 35.29412%, rgba(210, 105, 30, 0.5) 35.29412%, rgba(210, 105, 30, 0.5) 64.70588%, rgba(210, 105, 30, 0.25) 64.70588%, rgba(210, 105, 30, 0.25) 70.58824%, rgba(210, 105, 30, 0.5) 70.58824%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 105.88235%);
@@ -122,7 +123,7 @@
 }
 @media (min-width: 800px) {
   /* line 72, ../sass/style.sass */
-  #singularity {
+  .singularity {
     background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(210, 105, 30, 0.5)), color-stop(21.73913%, rgba(210, 105, 30, 0.5)), color-stop(21.73913%, rgba(210, 105, 30, 0.25)), color-stop(26.08696%, rgba(210, 105, 30, 0.25)), color-stop(26.08696%, rgba(210, 105, 30, 0.5)), color-stop(47.82609%, rgba(210, 105, 30, 0.5)), color-stop(47.82609%, rgba(210, 105, 30, 0.25)), color-stop(52.17391%, rgba(210, 105, 30, 0.25)), color-stop(52.17391%, rgba(210, 105, 30, 0.5)), color-stop(73.91304%, rgba(210, 105, 30, 0.5)), color-stop(73.91304%, rgba(210, 105, 30, 0.25)), color-stop(78.26087%, rgba(210, 105, 30, 0.25)), color-stop(78.26087%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.25)), color-stop(104.34783%, rgba(210, 105, 30, 0.25)));
     background-image: -webkit-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 21.73913%, rgba(210, 105, 30, 0.25) 21.73913%, rgba(210, 105, 30, 0.25) 26.08696%, rgba(210, 105, 30, 0.5) 26.08696%, rgba(210, 105, 30, 0.5) 47.82609%, rgba(210, 105, 30, 0.25) 47.82609%, rgba(210, 105, 30, 0.25) 52.17391%, rgba(210, 105, 30, 0.5) 52.17391%, rgba(210, 105, 30, 0.5) 73.91304%, rgba(210, 105, 30, 0.25) 73.91304%, rgba(210, 105, 30, 0.25) 78.26087%, rgba(210, 105, 30, 0.5) 78.26087%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 104.34783%);
     background-image: -moz-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 21.73913%, rgba(210, 105, 30, 0.25) 21.73913%, rgba(210, 105, 30, 0.25) 26.08696%, rgba(210, 105, 30, 0.5) 26.08696%, rgba(210, 105, 30, 0.5) 47.82609%, rgba(210, 105, 30, 0.25) 47.82609%, rgba(210, 105, 30, 0.25) 52.17391%, rgba(210, 105, 30, 0.5) 52.17391%, rgba(210, 105, 30, 0.5) 73.91304%, rgba(210, 105, 30, 0.25) 73.91304%, rgba(210, 105, 30, 0.25) 78.26087%, rgba(210, 105, 30, 0.5) 78.26087%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 104.34783%);
@@ -132,7 +133,7 @@
 }
 @media (min-width: 1010px) {
   /* line 72, ../sass/style.sass */
-  #singularity {
+  .singularity {
     background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(210, 105, 30, 0.5)), color-stop(17.24138%, rgba(210, 105, 30, 0.5)), color-stop(17.24138%, rgba(210, 105, 30, 0.25)), color-stop(20.68966%, rgba(210, 105, 30, 0.25)), color-stop(20.68966%, rgba(210, 105, 30, 0.5)), color-stop(37.93103%, rgba(210, 105, 30, 0.5)), color-stop(37.93103%, rgba(210, 105, 30, 0.25)), color-stop(41.37931%, rgba(210, 105, 30, 0.25)), color-stop(41.37931%, rgba(210, 105, 30, 0.5)), color-stop(58.62069%, rgba(210, 105, 30, 0.5)), color-stop(58.62069%, rgba(210, 105, 30, 0.25)), color-stop(62.06897%, rgba(210, 105, 30, 0.25)), color-stop(62.06897%, rgba(210, 105, 30, 0.5)), color-stop(79.31034%, rgba(210, 105, 30, 0.5)), color-stop(79.31034%, rgba(210, 105, 30, 0.25)), color-stop(82.75862%, rgba(210, 105, 30, 0.25)), color-stop(82.75862%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.5)), color-stop(100%, rgba(210, 105, 30, 0.25)), color-stop(103.44828%, rgba(210, 105, 30, 0.25)));
     background-image: -webkit-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 17.24138%, rgba(210, 105, 30, 0.25) 17.24138%, rgba(210, 105, 30, 0.25) 20.68966%, rgba(210, 105, 30, 0.5) 20.68966%, rgba(210, 105, 30, 0.5) 37.93103%, rgba(210, 105, 30, 0.25) 37.93103%, rgba(210, 105, 30, 0.25) 41.37931%, rgba(210, 105, 30, 0.5) 41.37931%, rgba(210, 105, 30, 0.5) 58.62069%, rgba(210, 105, 30, 0.25) 58.62069%, rgba(210, 105, 30, 0.25) 62.06897%, rgba(210, 105, 30, 0.5) 62.06897%, rgba(210, 105, 30, 0.5) 79.31034%, rgba(210, 105, 30, 0.25) 79.31034%, rgba(210, 105, 30, 0.25) 82.75862%, rgba(210, 105, 30, 0.5) 82.75862%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 103.44828%);
     background-image: -moz-linear-gradient(left, rgba(210, 105, 30, 0.5), rgba(210, 105, 30, 0.5) 17.24138%, rgba(210, 105, 30, 0.25) 17.24138%, rgba(210, 105, 30, 0.25) 20.68966%, rgba(210, 105, 30, 0.5) 20.68966%, rgba(210, 105, 30, 0.5) 37.93103%, rgba(210, 105, 30, 0.25) 37.93103%, rgba(210, 105, 30, 0.25) 41.37931%, rgba(210, 105, 30, 0.5) 41.37931%, rgba(210, 105, 30, 0.5) 58.62069%, rgba(210, 105, 30, 0.25) 58.62069%, rgba(210, 105, 30, 0.25) 62.06897%, rgba(210, 105, 30, 0.5) 62.06897%, rgba(210, 105, 30, 0.5) 79.31034%, rgba(210, 105, 30, 0.25) 79.31034%, rgba(210, 105, 30, 0.25) 82.75862%, rgba(210, 105, 30, 0.5) 82.75862%, rgba(210, 105, 30, 0.5) 100%, rgba(210, 105, 30, 0.25) 100%, rgba(210, 105, 30, 0.25) 103.44828%);
@@ -141,72 +142,187 @@
   }
 }
 /* line 38, c:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-#singularity:after {
+.singularity:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 81, ../sass/style.sass */
+/* line 82, ../sass/style.sass */
+#singularity2 .column {
+  margin-bottom: 1em;
+}
+@media (min-width: 400px) and (max-width: 600px) {
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(2n+1) {
+    width: 45.45455%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 9.09091%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(2n+2) {
+    width: 45.45455%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(3n+1) {
+    width: 29.41176%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 5.88235%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(3n+2) {
+    width: 29.41176%;
+    clear: right;
+    float: left;
+    margin-right: 5.88235%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(3n+3) {
+    width: 29.41176%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1010px) {
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(4n+1) {
+    width: 21.73913%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 4.34783%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(4n+2) {
+    width: 21.73913%;
+    clear: right;
+    float: left;
+    margin-right: 4.34783%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(4n+3) {
+    width: 21.73913%;
+    clear: right;
+    float: left;
+    margin-right: 4.34783%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(4n+4) {
+    width: 21.73913%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+@media (min-width: 1010px) {
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(5n+1) {
+    width: 17.24138%;
+    clear: right;
+    float: left;
+    margin-left: 0%;
+    margin-right: 3.44828%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(5n+2) {
+    width: 17.24138%;
+    clear: right;
+    float: left;
+    margin-right: 3.44828%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(5n+3) {
+    width: 17.24138%;
+    clear: right;
+    float: left;
+    margin-right: 3.44828%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(5n+4) {
+    width: 17.24138%;
+    clear: right;
+    float: left;
+    margin-right: 3.44828%;
+  }
+  /* line 95, ../sass/style.sass */
+  #singularity2 .column:nth-child(5n+5) {
+    width: 17.24138%;
+    clear: right;
+    float: right;
+    margin-right: 0%;
+  }
+}
+
+/* line 103, ../sass/style.sass */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 84, ../sass/style.sass */
+/* line 106, ../sass/style.sass */
 p {
   margin-bottom: 1em;
 }
 
-/* line 87, ../sass/style.sass */
+/* line 109, ../sass/style.sass */
 h2 {
   margin-top: 2em;
 }
 
-/* line 91, ../sass/style.sass */
+/* line 113, ../sass/style.sass */
 .demo p, .demo .column {
   font-family: monospace;
   border: 1px solid black;
   background-color: lightgrey;
   padding: 1em;
 }
-/* line 97, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 .demo p {
   max-width: 25em;
 }
 
-/* line 106, ../sass/style.sass */
+/* line 128, ../sass/style.sass */
 #info-1:after {
   content: "$slicer-breakpoints: 0 400px 600px 800px 1010px";
 }
 
 @media (max-width: 400px) {
-  /* line 110, ../sass/style.sass */
+  /* line 132, ../sass/style.sass */
   #info-2:after {
     content: "This window currently fits 1 slices.";
   }
 }
 @media (min-width: 400px) and (max-width: 600px) {
-  /* line 110, ../sass/style.sass */
+  /* line 132, ../sass/style.sass */
   #info-2:after {
     content: "This window currently fits 2 slices.";
   }
 }
 @media (min-width: 600px) and (max-width: 800px) {
-  /* line 110, ../sass/style.sass */
+  /* line 132, ../sass/style.sass */
   #info-2:after {
     content: "This window currently fits 3 slices.";
   }
 }
 @media (min-width: 800px) and (max-width: 1010px) {
-  /* line 110, ../sass/style.sass */
+  /* line 132, ../sass/style.sass */
   #info-2:after {
     content: "This window currently fits 4 slices.";
   }
 }
 @media (min-width: 1010px) {
-  /* line 110, ../sass/style.sass */
+  /* line 132, ../sass/style.sass */
   #info-2:after {
     content: "This window currently fits 5 slices.";
   }
