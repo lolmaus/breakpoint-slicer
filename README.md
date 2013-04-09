@@ -36,8 +36,7 @@ Breakpoint Slicer numbers the slices sequentially:
 The goal of Breakpoint Slicer is to let you quickly set breakpoints using these numbers instead of px/em values.
 
 
-Mixins
-------
+### Enter the mixins
 
 Breakpoint Slicer offers four handy mixins that let you set breakpoint ranges easily: `at`, `from`, `to` and `between`:
 
@@ -65,6 +64,7 @@ Styles under `between(2,4)` are applied when browser window width is inside the 
                                        ·         between(2, 4)         ·
                                        ├───────────────────────────────┤
 
+### Edge cases
 
 Note that the last slice does not have a right edge. When it is invoked, the media query will have no max-width value.
 
@@ -86,7 +86,7 @@ Some mixins become synonomous when used for the last slice:
                                        ·               between(2, 5)
                                        ├─────────────────────────────────────────>
 
-…and `to` becomes meaningless:
+…and `to` becomes meaningless (in this case the media query is omitted):
 
      Breakpoint:   0                 400px     600px     800px       1050px
                    ├───────────────────┼─────────┼─────────┼───────────┼─────────>
@@ -96,6 +96,23 @@ Some mixins become synonomous when used for the last slice:
                    ├─────────────────────────────────────────────────────────────>
 
 Note that the max-width of your site's container should be somewhere in the fifth slice.
+
+
+### Demo
+
+There's a small page testing Breakpoint Slicer in action: http://lolmaus.github.io/breakpoint-slicer/
+
+The code behind the demo page resides here: https://github.com/lolmaus/breakpoint-slicer/tree/gh-pages
+
+
+Installation
+------------
+
+Breakpoint Slicer is installed as any other Compass extension.
+
+Run `gem install breakpoint-slicer` in a terminal, then add `require 'breakpoint-slicer` to `config.rb` and `@import 'breakpoint-slicer';` in th beginning of your SCSS code.
+
+Instead of installing the gem manually, consider using [Bundler][3].
 
 
 Code examples
@@ -150,7 +167,7 @@ Retrieving breakpoints individually
 
 Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a slice asked for. E. g. `bp(2)` would return `600px`. Effectively, `bp()` is a shortcut for `nth()`.
 
-[Singularity][2] is the most modern and versatile SASS grid system. It [requires][3] breakpoints to be provided individually:
+[Singularity][2] is the most modern and versatile SASS grid system. It [requires][4] breakpoints to be provided individually:
 
     // Define breakpoints in a Slicer list
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
@@ -176,4 +193,5 @@ Breakpoint Slicer only works with min/max width. When you need some other media 
 
   [1]: https://github.com/Team-Sass/breakpoint
   [2]: https://github.com/Team-Sass/Singularity
-  [3]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
+  [3]: http://gembundler.com/
+  [4]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
