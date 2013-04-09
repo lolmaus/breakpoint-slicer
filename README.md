@@ -162,6 +162,11 @@ Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a
     $grids: add-grid(2 8 2     at bp(4));
     $grids: add-grid(1 3 5 7 9 at bp(5));
 
+It's very convenient to set the number of Singularity columns equal to the number of slices:
+
+    $grids: 1;
+    @for $i from 2 through total-slices() {
+      $grids: add-grid($i at bp($i)); }
 
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
 ----------------------------------------------------------------------

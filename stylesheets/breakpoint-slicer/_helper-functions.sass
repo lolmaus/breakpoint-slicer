@@ -1,0 +1,59 @@
+// total-slices()
+//
+// Accepts no arguments.
+//
+// Returns total number of slices
+// (which is equal to total number of breakpoints).
+@function total-slices()
+  @return length($slicer-breakpoints)
+
+  
+// left-bp-of-slice($slice)
+// - $slice : <slice number> A number of a slice. Should be positive integer.
+//
+// Returns the left breakpoint of an Nth slice, e. g. `600px`.
+@function left-bp-of-slice($slice)
+  $min: 1
+  $max: total-slices()
+
+  // Making sure that the slice provided is valid
+  @if ($slice < $min) or ($slice > $max)
+
+    @warn "Wrong Slice number provided: #{$slice}. Should be between #{min} and #{$max}."
+
+  @else
+
+    // Returning the left edge of the slice
+    $left:  nth($slicer-breakpoints, $slice)
+
+    // Special treatment of the first slice...
+    @if $slice == 1
+      // ...to prevent a meaningless `min-width: 0` meida query
+      $left:  max-width // This is Breakpoint's syntax
+
+    @return $left
+
+
+// left-bp-of-slice($slice)
+// - $slice : <slice number> A number of a slice. Should be positive integer.
+//
+// Returns the right breakpoint of an Nth slice, e. g. `800px`.
+@function right-bp-of-slice($slice)
+  $min: 1
+  $max: total-slices() - 1
+
+  // Making sure that the slice provided is valid
+  @if $max == total-slices()
+    @warn "Slice number provided: #{$slice}. It's the last slice, it has no right edge."
+  @else if ($slice < $min) or ($slice > $max)
+    @warn "Wrong column number provided: #{$slice}. Should be between #{min} and #{$max}."
+  @else
+    // Returning the right edge of the slice
+    @return nth($slicer-breakpoints, $slice + 1)
+
+
+// bp($slice)
+//
+// A shortcut for nth($slicer-breakpoints, $slice)
+@function bp($slice)
+  @return nth($slicer-breakpoints, $slice)
