@@ -3,6 +3,8 @@
 Breakpoint Slicer
 =================
 
+**Slice media queries with no effort**
+
 Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoint][1]. It offers a powerful yet very simple way to slice your media queries.
 
 Just list your breakpoints and Breakpoint Slicer will magically turn them into slices. You can address the with their sequence numbers:
@@ -36,8 +38,7 @@ Breakpoint Slicer numbers the slices sequentially:
 The goal of Breakpoint Slicer is to let you quickly set breakpoints using these numbers instead of px/em values.
 
 
-Mixins
-------
+### Enter the mixins
 
 Breakpoint Slicer offers four handy mixins that let you set breakpoint ranges easily: `at`, `from`, `to` and `between`:
 
@@ -65,6 +66,19 @@ Styles under `between(2,4)` are applied when browser window width is inside the 
                                        ·         between(2, 4)         ·
                                        ├───────────────────────────────┤
 
+Note that the max-width of your site's container should be somewhere in the fifth slice.
+
+### Comparison between Breakpoint Slicer and vanilla Breakpoint
+
+Slicer usage       | Breakpoint equivalent         | The resulting media query
+------------------ | ----------------------------- | ------------------------------------------
+at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
+from(2)            | breakpoint(400px)             | (min-width: 400px)
+to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
+between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
+
+
+### Edge cases
 
 Note that the last slice does not have a right edge. When it is invoked, the media query will have no max-width value.
 
@@ -86,7 +100,7 @@ Some mixins become synonomous when used for the last slice:
                                        ·               between(2, 5)
                                        ├─────────────────────────────────────────>
 
-…and `to` becomes meaningless:
+…and some become meaningless (in these cases media query is omitted):
 
      Breakpoint:   0                 400px     600px     800px       1050px
                    ├───────────────────┼─────────┼─────────┼───────────┼─────────>
@@ -94,8 +108,26 @@ Some mixins become synonomous when used for the last slice:
                    ·
                    ·                                                      to(5)
                    ├─────────────────────────────────────────────────────────────>
+                   ·
+                   ·      from(1)
+                   ├─────────────────────────────────────────────────────────────>
 
-Note that the max-width of your site's container should be somewhere in the fifth slice.
+
+### Demo
+
+There's a small page testing Breakpoint Slicer in action: http://lolmaus.github.io/breakpoint-slicer/
+
+The code behind the demo page resides here: https://github.com/lolmaus/breakpoint-slicer/tree/gh-pages
+
+
+Installation
+------------
+
+Breakpoint Slicer is installed as any other Compass extension.
+
+Run `gem install breakpoint-slicer` in a terminal, then add `require 'breakpoint-slicer` to `config.rb` and `@import 'breakpoint-slicer';` in th beginning of your SCSS code.
+
+Instead of installing the gem manually, consider using [Bundler][3].
 
 
 Code examples
@@ -104,28 +136,27 @@ Code examples
 Enlist your breakpoints in the `$slicer-breakpoints` variable:
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
+    
+If you don't do that, defaults are used (these were the defaults).
 
-Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoint mixin:
+    
+### Basic usage
+
+Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoint mixins:
 
     .element {
       @include at(2) {
-        // Code in this block will only be applied to .element
+        // Code from this block will only be applied to .element
         // when browser window width is between 400px and 600px.
         background-color: red;
         
         // This is a mixin from Singularity
         @include grid-span(2, 4); } }
+        
 
-Comparison between Breakpoint Slicer and Breakpoint for the breakpoints defined above:
+### Creating a responsive grid
 
-Slicer usage       | Breakpoint equivalent         | The resulting media query
------------------- | ----------------------------- | ------------------------------------------
-at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
-from(2)            | breakpoint(400px)             | (min-width: 400px)
-to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
-between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
-
-With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly:
+With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly. The example below makes use of [Susy][2].
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
     $amount-of-slices:   length($slicer-breakpoints);
@@ -145,12 +176,11 @@ With Breakpoint Slicer you can easily cycle through scices and apply column span
           @include nth-omega(#{$i}n); }}}
           
 
-Retrieving breakpoints individually
------------------------------------
+### Leveraging Singularity
+
+[Singularity][3] is the most modern and versatile SASS grid system. It [requires][4] breakpoints to be provided individually.
 
 Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a slice asked for. E. g. `bp(2)` would return `600px`. Effectively, `bp()` is a shortcut for `nth()`.
-
-[Singularity][2] is the most modern and versatile SASS grid system. It [requires][3] breakpoints to be provided individually:
 
     // Define breakpoints in a Slicer list
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
@@ -164,16 +194,40 @@ Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a
 
 It's very convenient to set the number of Singularity columns equal to the number of slices:
 
+    $slicer-breakpoints: 0 400px 600px 800px 1050px;
+    
     $grids: 1;
     @for $i from 2 through total-slices() {
       $grids: add-grid($i at bp($i)); }
+      
 
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
 ----------------------------------------------------------------------
 
-Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc — use Breakpoint in a conventional way, Breakpoint Slicer won't interfere.
+Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc, just use Breakpoint in a conventional way. Breakpoint Slicer won't interfere.
+
+You can even have different sets of min/max widths defined with Breakpoint Slicer and Respond To (or vanilla Breakpoint).
+
+
+Credit
+------
+
+The initial idea of Breakpoint Slicer came when i (Andrey Mikhaylov aka lolmaus) got to know Susy and learned that the number of columns in a grid can be different for different browser widths. Susy gave me an idea that it's convenient to have breakpoints listed sequentially and for each breakpoint the number of columns is set equal to that breakpoint's number in the list.
+
+This Compass extension was made possible with kind support from Eric Meyer, Sam Richard aka Snugug and Scott Kellum.
+
+
+License
+-------
+
+Licensed under MIT/GPL.
+
+- GPL2 license: http://www.gnu.org/licenses/gpl-2.0.html
+- MIT license: http://www.opensource.org/licenses/mit-license.php
 
 
   [1]: https://github.com/Team-Sass/breakpoint
-  [2]: https://github.com/Team-Sass/Singularity
-  [3]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
+  [2]: http://susy.oddbird.net/
+  [3]: https://github.com/Team-Sass/Singularity
+  [4]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
+
