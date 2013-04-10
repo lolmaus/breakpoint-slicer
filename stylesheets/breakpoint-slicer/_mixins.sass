@@ -4,70 +4,6 @@
 ////////////////////////////////////////////////
 
 // Wraps the content block provided with a media query
-// with min-width and max-width equal to the edges of a slice
-//
-// at($slice)
-// - $slice : <slice number> A number of a slice. Should be a positive integer.
-=at($slice)
-
-  // Retrieving the left edge of the slice
-  $context:   left-bp-of-slice($slice)
-
-  // Retrieving the right edge of the slice
-  // unless the slice is the last one
-  @if $slice < total-slices()
-    $right:   right-bp-of-slice($slice)
-    $context: append($context, $right)
-
-  // Setting the breakpoint
-  +breakpoint($context)
-    @content
-
-
-// Wraps the content block provided with a media query
-// with min-width equal to the right edge of a slice
-//
-// from($slice)
-// - $slice : <slice number> A number of a slice. Should be a positive integer.
-=from($slice)
-
-  // If the slice is the first one, the breakpoint becomes meaningless
-  @if $slice == 1
-    // Thus, don't wrap the code block with a media query
-    @content
-
-  @else
-    // Retrieving the left edge of the slice
-    $context:   left-bp-of-slice($slice)
-
-    // Setting the breakpoint
-    +breakpoint($context)
-      @content
-
-
-// Wraps the content block provided with a media query
-// with max-width equal to the right edge of a slice
-//
-// to($slice)
-// - $slice : <slice number> A number of a slice. Should be a positive integer.
-=to($slice)
-
-  // If the slice is the last one, the breakpoint becomes meaningless
-  @if $slice == total-slices()
-    // Thus, don't wrap the code block with a media query
-    @content
-
-  @else
-    // Retrieving the right edge of the slice
-    $right:   right-bp-of-slice($slice)
-    $context: max-width $right
-
-    // Setting the breakpoint
-    +breakpoint($context)
-      @content
-
-
-// Wraps the content block provided with a media query
 // with min-width equal to the left edge of the left slice
 // and max-width equal to the right edge of the right slice
 //
@@ -96,3 +32,38 @@
     // Setting the breakpoint
     +breakpoint($context)
       @content
+
+
+// Wraps the content block provided with a media query
+// with min-width and max-width equal to the edges of a slice
+//
+// at($slice)
+// - $slice : <slice number> A number of a slice. Should be a positive integer.
+=at($slice)
+
+  +between($slice, $slice)
+    @content
+
+
+// Wraps the content block provided with a media query
+// with min-width equal to the right edge of a slice
+//
+// from($slice)
+// - $slice : <slice number> A number of a slice. Should be a positive integer.
+=from($slice)
+
+  +between(1, $slice)
+    @content
+
+
+// Wraps the content block provided with a media query
+// with max-width equal to the right edge of a slice
+//
+// to($slice)
+// - $slice : <slice number> A number of a slice. Should be a positive integer.
+=to($slice)
+
+  +between($slice, total-slices())
+    @content
+
+
