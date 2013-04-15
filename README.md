@@ -201,7 +201,7 @@ It's very convenient to set the number of Singularity columns equal to the numbe
       $grids: add-grid($i at bp($i)); }
 
 
-## Using the no-query fallback
+### Using the no-query fallback
 
 Breakpoint Slicer supports the Breakpoint's no-query fallback. Just set the `$breakpoint-no-query-wrappers` variable to true and provide a fallback class as an argument to any Breakpoint Slicer mixin:
 
