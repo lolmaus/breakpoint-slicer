@@ -7,10 +7,11 @@
 // with min-width equal to the left edge of the left slice
 // and max-width equal to the right edge of the right slice
 //
-// between($slice-left, $slice-right)
+// between($slice-left, $slice-right, $no-query: false)
 // - $slice-left  : <slice number> A number of the left slice. Should be a positive integer.
 // - $slice-right : <slice number> A number of the left slice. Should be a positive integer.
-=between($slice-left, $slice-right)
+// - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
+=between($slice-left, $slice-right, $no-query: false)
 
   // If the slices provided are the first and the last one,
   // the breakpoint becomes meaningless
@@ -30,40 +31,43 @@
       $context: append($context, $right)
 
     // Setting the breakpoint
-    +breakpoint($context)
+    +breakpoint($context, $no-query)
       @content
 
 
 // Wraps the content block provided with a media query
 // with min-width and max-width equal to the edges of a slice
 //
-// at($slice)
+// at($slice, $no-query: false)
 // - $slice : <slice number> A number of a slice. Should be a positive integer.
-=at($slice)
+// - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
+=at($slice, $no-query: false)
 
-  +between($slice, $slice)
+  +between($slice, $slice, $no-query)
     @content
 
 
 // Wraps the content block provided with a media query
 // with min-width equal to the right edge of a slice
 //
-// from($slice)
+// from($slice, $no-query: false)
 // - $slice : <slice number> A number of a slice. Should be a positive integer.
-=from($slice)
+// - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
+=from($slice, $no-query: false)
 
-  +between(1, $slice)
+  +between(1, $slice, $no-query)
     @content
 
 
 // Wraps the content block provided with a media query
 // with max-width equal to the right edge of a slice
 //
-// to($slice)
+// to($slice, $no-query: false)
 // - $slice : <slice number> A number of a slice. Should be a positive integer.
-=to($slice)
+// - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
+=to($slice, $no-query: false)
 
-  +between($slice, total-slices())
+  +between($slice, total-slices(), $no-query)
     @content
 
 

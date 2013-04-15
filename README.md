@@ -130,8 +130,8 @@ Run `gem install breakpoint-slicer` in a terminal, then add `require 'breakpoint
 Instead of installing the gem manually, consider using [Bundler][3].
 
 
-Code examples
--------------
+Usage
+-----
 
 Enlist your breakpoints in the `$slicer-breakpoints` variable:
 
@@ -199,6 +199,26 @@ It's very convenient to set the number of Singularity columns equal to the numbe
     $grids: 1;
     @for $i from 2 through total-slices() {
       $grids: add-grid($i at bp($i)); }
+
+
+## Using the no-query fallback
+
+Breakpoint Slicer supports the Breakpoint's no-query fallback. Just set the `$breakpoint-no-query-wrappers` variable to true and provide a fallback class as an argument to any Breakpoint Slicer mixin:
+
+    $breakpoint-no-query-wrappers:  true
+
+    .element
+      +at(2, .touch)
+        color: red
+
+produces:
+
+    @media (min-width: 400px) and (max-width: 600px) {
+      .element {
+        color: red; } }
+
+    .touch .element {
+      color: red; }
       
 
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
@@ -207,6 +227,8 @@ Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
 Breakpoint Slicer only works with min/max width. When you need some other media queries like media types, resolution, orientation, etc, just use Breakpoint in a conventional way. Breakpoint Slicer won't interfere.
 
 You can even have different sets of min/max widths defined with Breakpoint Slicer and Respond To (or vanilla Breakpoint).
+
+Breakpoint Slicer does not support nesting its mixins inside Breakpoint mixins.
 
 
 Credit
