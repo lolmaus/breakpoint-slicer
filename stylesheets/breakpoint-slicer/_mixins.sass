@@ -55,7 +55,7 @@
 // - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
 =from($slice, $no-query: false)
 
-  +between(1, $slice, $no-query)
+  +between($slice, total-slices(), $no-query)
     @content
 
 
@@ -67,7 +67,7 @@
 // - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
 =to($slice, $no-query: false)
 
-  +between($slice, total-slices(), $no-query)
+  +between(1, $slice, $no-query)
     @content
 
 

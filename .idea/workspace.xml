@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/_breakpoint-slicer.sass" afterPath="$PROJECT_DIR$/stylesheets/_breakpoint-slicer.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="$PROJECT_DIR$/CHANGELOG.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass" afterPath="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_variables.sass" afterPath="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_variables.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/breakpoint-slicer.rb" afterPath="$PROJECT_DIR$/lib/breakpoint-slicer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="breakpoint-slicer.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366016149451" ignored="false" />
+    <file path="/Dummy.txt" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366127562083" ignored="false" />
     <file path="T:/platforms/drupal-6.28/sites/all/themes/bonuscasinos/.idea/workspace.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365530054174" ignored="false" />
     <file path="/index.html" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365543036863" ignored="false" />
     <file path="/config.rb" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366025743119" ignored="false" />
@@ -30,7 +27,7 @@
     <file path="/screen.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366025703229" ignored="false" />
     <file path="/breakpoint-slicer.rb" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366024799201" ignored="false" />
     <file path="/_variables.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366024833771" ignored="false" />
-    <file path="/CHANGELOG.md" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366025802360" ignored="false" />
+    <file path="/CHANGELOG.md" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366127635430" ignored="false" />
     <file path="/README.md" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366025771227" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,16 +51,25 @@
       <file leaf-file-name="_mixins.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="98" selection-start="2532" selection-end="2532" vertical-scroll-proportion="-26.52">
+            <state line="70" column="0" selection-start="2610" selection-end="2610" vertical-scroll-proportion="-28.32">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CHANGELOG.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CHANGELOG.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="139" selection-end="139" vertical-scroll-proportion="0.2678788">
+            <state line="19" column="45" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="breakpoint-slicer.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/breakpoint-slicer.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="3" selection-start="199" selection-end="199" vertical-scroll-proportion="0.16444983">
               <folding />
             </state>
           </provider>
@@ -72,16 +78,7 @@
       <file leaf-file-name="_variables.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_variables.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="breakpoint-slicer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/breakpoint-slicer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="16" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+            <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +87,7 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="9" selection-start="8975" selection-end="8975" vertical-scroll-proportion="0.0">
+            <state line="214" column="0" selection-start="8977" selection-end="8977" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,7 +96,7 @@
       <file leaf-file-name="_breakpoint-slicer.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylesheets/_breakpoint-slicer.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="-1.36">
+            <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,12 +142,12 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/sass/_float-span.scss" />
         <option value="$PROJECT_DIR$/sass/style.sass" />
-        <option value="$PROJECT_DIR$/lib/breakpoint-slicer.rb" />
         <option value="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_variables.sass" />
         <option value="$PROJECT_DIR$/stylesheets/_breakpoint-slicer.sass" />
-        <option value="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/lib/breakpoint-slicer.rb" />
       </list>
     </option>
   </component>
@@ -312,18 +309,22 @@
       <created>1365585231663</created>
       <updated>1365585231663</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added support for the no-query fallback">
+      <created>1366025859331</created>
+      <updated>1366025859331</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-198" width="1296" height="1010" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21474878" sideWeight="0.6709753" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21799028" sideWeight="0.6709753" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -382,7 +383,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored for DRY, now `between` does all the work." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for the no-query fallback" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -399,11 +400,47 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Added a thumbnail grid" />
     <MESSAGE value="Refactored for DRY, now `between` does all the work." />
+    <MESSAGE value="Added support for the no-query fallback" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_variables.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="9" selection-start="8975" selection-end="8975" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/_breakpoint-slicer.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -437,13 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/breakpoint-slicer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_variables.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="-0.0">
@@ -453,28 +483,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/_breakpoint-slicer.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="-1.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="98" selection-start="2532" selection-end="2532" vertical-scroll-proportion="-26.52">
+        <state line="2" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="9" selection-start="8975" selection-end="8975" vertical-scroll-proportion="0.0">
+        <state line="214" column="0" selection-start="8977" selection-end="8977" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/breakpoint-slicer/_mixins.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="2610" selection-end="2610" vertical-scroll-proportion="-28.32">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="139" selection-end="139" vertical-scroll-proportion="0.2678788">
+        <state line="19" column="45" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/breakpoint-slicer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="3" selection-start="199" selection-end="199" vertical-scroll-proportion="0.16444983">
           <folding />
         </state>
       </provider>

@@ -12,3 +12,9 @@ Initial release
 
 - Refactored for DRY.
 - Added support for the Breakpoint's no-query fallback.
+
+
+1.1
+---
+
+- Fixed `to` and `from` being swapped. (-_-')
