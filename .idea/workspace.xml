@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+    <list default="true" id="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" name="Default" comment="Compiled  latest Breakpoint Slicer">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/breakpoint-slicer.iml" afterPath="$PROJECT_DIR$/.idea/breakpoint-slicer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sass/style.sass" afterPath="$PROJECT_DIR$/sass/style.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="breakpoint-slicer.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365542215316" ignored="false" />
+    <file path="/Dummy.txt" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366133284536" ignored="false" />
     <file path="T:/platforms/drupal-6.28/sites/all/themes/bonuscasinos/.idea/workspace.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365530054174" ignored="false" />
     <file path="/index.html" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365543036863" ignored="false" />
     <file path="/config.rb" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365526283783" ignored="false" />
-    <file path="/style.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365542991158" ignored="false" />
+    <file path="/style.sass" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366133222609" ignored="false" />
     <file path="/display-width.js" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365527200536" ignored="false" />
     <file path="/dummy.xml" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1365542741176" ignored="false" />
+    <file path="/_float.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131908644" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/api/_float.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131988604" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/_grids.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/_gutters.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/_api.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/api/_isolation.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/gutters/_add.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/gutters/_find.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/grids/_add.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/grids/_find.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366132139682" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/math/_columns.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/math/_gutters.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/math/_context.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/math/_grid.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/language/_parse-list.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/language/_parse-add.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/language/_span.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_find.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_sass-lists.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_columns.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_clearfix.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_box-sizing.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/example/sass/demo/isolation.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131000555" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_span-shared.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/example/sass/demo/ag-symmetric.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131000555" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_directions.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_background-grid.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/helpers/_layout.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/templates/demos/demo-isolation.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131000555" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/_singularitygs.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721412" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/_helpers.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/_language.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="$PROJECT_DIR$/../Singularity/stylesheets/singularitygs/_math.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366131721413" ignored="false" />
+    <file path="/_find.scss" changelist="3fffbbf8-2b9f-42e3-af74-ff52b8bf2901" time="1366132101700" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +78,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="display-width.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/display-width.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,19 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.sass" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.sass" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sass/style.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="41" selection-start="1874" selection-end="1874" vertical-scroll-proportion="-24.28">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="20" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.54695433">
+            <state line="61" column="23" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.21375">
               <folding />
             </state>
           </provider>
@@ -84,6 +100,24 @@
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="23" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="20" selection-start="1305" selection-end="1305" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
@@ -112,15 +146,16 @@
         <option value="$PROJECT_DIR$/sass/screen.sass" />
         <option value="$PROJECT_DIR$/config.rb" />
         <option value="$PROJECT_DIR$/js/display-width.js" />
-        <option value="$PROJECT_DIR$/sass/style.sass" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/sass/_float.scss" />
+        <option value="$PROJECT_DIR$/sass/style.sass" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-1288" />
-    <option name="y" value="384" />
+    <option name="y" value="826" />
     <option name="width" value="1296" />
     <option name="height" value="1010" />
   </component>
@@ -150,6 +185,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -164,7 +200,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="breakpoint-slicer" />
+              <option name="myItemId" value="breakpoint-slicer-gh-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -174,7 +210,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="breakpoint-slicer" />
+              <option name="myItemId" value="breakpoint-slicer-gh-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -188,21 +224,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="breakpoint-slicer" />
+              <option name="myItemId" value="breakpoint-slicer-gh-pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="133" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="133" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="807" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="807" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="133" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="131" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -252,25 +304,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="384" width="1296" height="1010" extended-state="6" />
+    <frame x="-1288" y="826" width="1296" height="1010" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21150729" sideWeight="0.6705744" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21474878" sideWeight="0.6709753" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -338,6 +390,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="20" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
@@ -380,9 +446,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/display-width.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="20" selection-start="1305" selection-end="1305" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
@@ -401,28 +479,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/display-width.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="41" selection-start="1874" selection-end="1874" vertical-scroll-proportion="-24.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="20" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.54695433">
+        <state line="61" column="23" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.21375">
           <folding />
         </state>
       </provider>
