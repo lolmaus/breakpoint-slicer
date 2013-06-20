@@ -220,22 +220,22 @@ produces:
     .touch .element {
       color: red; }
 
-### Preventing the slices from overlapping
+### Preventing slices from overlapping
 
 **New in 1.2 (2013-06-20)**
 
 Breakpoint Slicer would produce overlapping media queries, e. g. 400px—600px and 600px—800px overlap at 600px.
 
-To prevent this, the `$slicer-anti-overlap-corrections` variable was introduced:
+To prevent this, the `$slicer-anti-overlap-corrections` configuration variable was introduced:
 
   * If it's set to `1px`, the left edge of each slice will be incremented by 1px, e. g. 401px—600px and 601px—800px.
   * If it's set to `-1px`, the right edge of each slice will be decremented by 1px, e. g. 400px—599px and 600px—799px.
 
-The value of 1 is optimal for pixels but may be inappropriate for relative units like ems: a 1em-wide gap between slicer might render you site unstyled at certain screen width.
+The value of 1 is optimal for pixels but may be inappropriate for relative units like ems: a 1em-wide gap between slices might render you site unstyled at certain screen widths.
 
-`$slicer-anti-overlap-corrections` may contain a list of values with different units, e. g:
+If you want anti-overlapping for units other than px, you can add them to `$slicer-anti-overlap-corrections` like this:
 
-    $slicer-anti-overlap-corrections: 1px -0.1em
+    $slicer-anti-overlap-corrections: 1px, -0.1em, -0.1rem
 
 The default value for `$slicer-anti-overlap-corrections` is `1px`.
 
