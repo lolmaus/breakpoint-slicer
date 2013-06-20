@@ -18,3 +18,8 @@ Initial release
 ---
 
 - Fixed `to` and `from` being swapped. (-_-')
+
+1.2
+---
+
+- Introduced `$slicer-anti-overlap-corrections` to prevent slices from overlapping.

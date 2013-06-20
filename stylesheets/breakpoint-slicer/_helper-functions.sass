@@ -1,3 +1,23 @@
+// Returns a correction value for the given breakpoint
+// to prevent media query overlapping.
+//
+// Relies on the global variable $slicer-anti-overlap-corrections
+// that should contain a list of allowed correction values.
+//
+// Returns either only positive or only negative value.
+//
+// anti-overlap-correction($bp, $positive: true)
+//   - $bp       : a breakpoint, e. g. 800px or 20em
+//   - $positive : whether to return only positive or only negative values
+//                 * true - return only positive correction value (default)
+//                 * false - return only negative correction value //
+@function anti-overlap-correction($bp, $positive: true)
+  @each $correction in $slicer-anti-overlap-corrections
+    @if (unit($bp) == unit($correction)) and (($correction > 0) == $positive)
+      @return $correction
+  @return 0
+
+
 // total-slices()
 //
 // Accepts no arguments.
@@ -23,13 +43,17 @@
 
   @else
 
-    // Returning the left edge of the slice
-    $left:  nth($slicer-breakpoints, $slice)
+    $left: i am declared
 
     // Special treatment of the first slice...
     @if $slice == 1
       // ...to prevent a meaningless `min-width: 0` meida query
       $left:  max-width // This is Breakpoint's syntax
+
+    @else
+      // Returning the left edge of the slice
+      $left:  nth($slicer-breakpoints, $slice)
+      $left:  $left + anti-overlap-correction($left, true)
 
     @return $left
 
@@ -48,8 +72,9 @@
   @else if ($slice < $min) or ($slice > $max)
     @warn "Wrong column number provided: #{$slice}. Should be between #{min} and #{$max}."
   @else
-    // Returning the right edge of the slice
-    @return nth($slicer-breakpoints, $slice + 1)
+    // Reading the right edge of the slice
+    $right-bp: nth($slicer-breakpoints, $slice + 1)
+    @return $right-bp + anti-overlap-correction($right-bp, false)
 
 
 // bp($slice)
