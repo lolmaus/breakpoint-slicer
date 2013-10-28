@@ -72,10 +72,10 @@ Note that the max-width of your site's container should be somewhere in the fift
 
 Slicer usage       | Breakpoint equivalent         | The resulting media query
 ------------------ | ----------------------------- | ------------------------------------------
-at(2)              | breakpoint(400px 600px)       | (min-width: 400px) and (max-width: 600px)
-from(2)            | breakpoint(400px)             | (min-width: 400px)
+at(2)              | breakpoint(401px 600px)       | (min-width: 401px) and (max-width: 600px)
+from(2)            | breakpoint(401px)             | (min-width: 401px)
 to(2)              | breakpoint(max-width 600px)   | (max-width: 600px)
-between(2, 4)      | breakpoint(400px 1050px)      | (min-width: 400px) and (max-width: 1050px)
+between(2, 4)      | breakpoint(401px 1050px)      | (min-width: 401px) and (max-width: 1050px)
 
 
 ### Edge cases
@@ -224,7 +224,7 @@ produces:
 
 **New in 1.2 (2013-06-20)**
 
-Breakpoint Slicer would produce overlapping media queries, e. g. 400px—600px and 600px—800px overlap at 600px.
+Breakpoint Slicer used to produce overlapping media queries, e. g. 400px—600px and 600px—800px overlap at 600px.
 
 To prevent this, the `$slicer-anti-overlap-corrections` configuration variable was introduced:
 
@@ -236,6 +236,8 @@ The value of 1 is optimal for pixels but may be inappropriate for relative units
 If you want anti-overlapping for units other than px, you can add them to `$slicer-anti-overlap-corrections` like this:
 
     $slicer-anti-overlap-corrections: 1px, -0.1em, -0.1rem
+    
+Keep in mind that using an overlap correction for relative values will most likely result in a gap instead of an overlap. This could be resolved by taking base font size into consideration and calculating a correction that would be equal to 1px, but Breakpoint Slicer is not yet capable of that.
 
 The default value for `$slicer-anti-overlap-corrections` is `1px`.
 
