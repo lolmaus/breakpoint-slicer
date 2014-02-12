@@ -1,0 +1,5 @@
+{
+  "name": "Breakpoint Slicer",
+  "description": "Slice media queries with no effort. A very quick and efficient syntax for Breakpoint.",
+  "tags": ["media-queries", "rwd", "responsive-web-design", "dry"]
+}
