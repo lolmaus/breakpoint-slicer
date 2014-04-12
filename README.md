@@ -125,7 +125,7 @@ Installation
 
 Breakpoint Slicer is installed as any other Compass extension.
 
-Run `gem install breakpoint-slicer` in a terminal, then add `require 'breakpoint-slicer` to `config.rb` and `@import 'breakpoint-slicer';` in th beginning of your SCSS code.
+Run `gem install breakpoint-slicer` in a terminal, then add `require 'breakpoint-slicer'` to `config.rb` and `@import 'breakpoint-slicer';` in th beginning of your SCSS code.
 
 Instead of installing the gem manually, consider using [Bundler][3].
 
