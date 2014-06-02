@@ -27,7 +27,23 @@
 @function total-slices()
   @return length($slicer-breakpoints)
 
-  
+
+// slice-index($key)
+// - $key : <slice key> A map key of a slice.
+//
+// Returns the slice index of the given map key.
+// If $key is numeric, it is already a index, so just return it
+@function slice-index($key)
+  @if type-of($key) == number
+    @return $key
+  @else if $slicer-breakpoints-map
+    $keys: map-keys($slicer-breakpoints-map)
+    @if map-has-key($slicer-breakpoints-map, $key) == false
+      @warn "Invalid slice key provided: #{$key}. Should be one of: #{$keys}."
+    @else
+      @return index($keys, $key) - 1
+
+
 // left-bp-of-slice($slice)
 // - $slice : <slice number> A number of a slice. Should be positive integer.
 //
@@ -39,7 +55,7 @@
   // Making sure that the slice provided is valid
   @if ($slice < $min) or ($slice > $max)
 
-    @warn "Wrong Slice number provided: #{$slice}. Should be between #{min} and #{$max}."
+    @warn "Wrong slice number provided: #{$slice}. Should be between #{$min} and #{$max}."
 
   @else
 
