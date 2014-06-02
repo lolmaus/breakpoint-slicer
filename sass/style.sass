@@ -1,6 +1,6 @@
 // Dependencies
 @import compass
-@import breakpoint-slicer
+@import ../../breakpoint-slicer/stylesheets/breakpoint-slicer
 
 /////////////////////////////////////////
 // Testing the mixins
@@ -45,7 +45,7 @@ $gutters: 0.2
   // Setting the number of columns in each slice equal to the number of that slice.
   $grids: add-grid($i at bp($i))
 
-// Spanning the column
+// Spanning the columns
 #singularity1 .column
 
   // This text will appear when no media queries are applied.
@@ -93,7 +93,10 @@ $gutters: 0.2
 
         // Span thumbnails in this column
         &:nth-child(#{$slice}n+#{$column})
-          +grid-span(1, $column, $output-style: float)
+          +grid-span(1, $column)
+
+          @if $column == 1
+            clear: both
 
 
 /////////////////////////////////////////

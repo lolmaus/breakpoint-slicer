@@ -1,4 +1,3 @@
-require 'breakpoint-slicer'
 require 'singularitygs'
 
 css_dir = "css"
