@@ -8,7 +8,7 @@
   .demo .from {
     background-color: black;
     color: white; } }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   /* line 37, ../sass/style.sass */
   .demo .to {
     background-color: black;
