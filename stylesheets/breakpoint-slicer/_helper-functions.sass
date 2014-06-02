@@ -82,3 +82,25 @@
 // A shortcut for nth($slicer-breakpoints, $slice)
 @function bp($slice)
   @return nth($slicer-breakpoints, $slice)
+
+
+// get-slice-id($slice-id-or-name)
+// - $slice-id-or-name: <slice number or name> Should be either a number of a slice (positive integer)
+                                               or a name of the slice from $slicer-breakpoint-names (string)
+@function get-slice-id($slice-id-or-name)
+
+  // Treating the argument as a slice name.
+  // Retrieving slice id for given slice name
+  $slice-id: index($slicer-breakpoint-names, $slice-id-or-name)
+
+  // Checking whether a slice with the given name exists
+  @if $slice-id
+    //@warn "slice-id is truthful"
+
+    // Return the id found
+    @return $slice-id
+  @else
+    //@warn "slice-id is falsy"
+
+    // Assume an id was given in the first place
+    @return $slice-id-or-name

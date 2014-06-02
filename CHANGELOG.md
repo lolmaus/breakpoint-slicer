@@ -19,7 +19,14 @@ Initial release
 
 - Fixed `to` and `from` being swapped. (-_-')
 
+
 1.2
 ---
 
 - Introduced `$slicer-anti-overlap-corrections` to prevent slices from overlapping.
+
+
+1.3
+---
+
+- Introduced `$slicer-breakpoint-names` to call slices by name rather than number.

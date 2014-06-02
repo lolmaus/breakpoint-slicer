@@ -9,8 +9,10 @@ Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoin
 
 Just list your breakpoints and Breakpoint Slicer will magically turn them into slices. You can address the with their sequence numbers:
 
-    $slicer-breakpoints: 0 400px 600px 800px 1050px;
-    // Slice numbers:    |  1 |  2 |  3  |  4  |  5  →
+    $slicer-breakpoints:        0        400px       600px      800px        1050px
+    
+    //                          └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────
+    // Slice numbers:                1           2           3           4           5
     
     // Set a media query
     @include at(3) {
@@ -241,6 +243,23 @@ Keep in mind that using an overlap correction for relative values will most like
 
 The default value for `$slicer-anti-overlap-corrections` is `1px`.
 
+
+
+### Calling slices by names rather than numbers
+
+**New in 1.3 (2014-06-02)**
+
+If you find it hard to remember your slices by there numerical ids, you can name them by setting the `$slicer-breakpoint-names` variable.
+
+The variable should contain a Sass list, each item referencing a slice (not breakpoint!):
+
+    $slicer-breakpoints:        0        400px       600px      800px        1050px
+    
+    //                          └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────
+    // Slice numbers:                1           2           3           4           5
+    $slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'
+    
+Then you can use slice names instead of numbers in Breakpoint Slicer mixins: `at('m')`, `between('s', 'l')`, etc.
 
 
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
