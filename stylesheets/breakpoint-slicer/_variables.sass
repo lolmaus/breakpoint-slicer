@@ -1,3 +1,13 @@
 // The defaults
 $slicer-breakpoints: 0 400px 600px 800px 1010px !default
+$slicer-breakpoints-map: false
+// $slicer-breakpoints-map: (sm: 400px, md: 600px, lg: 800px, xlg: 1010px) !default
 $slicer-anti-overlap-corrections: 1px !default
+
+// If we're dealing with a map:
+// - Prepend a 0 starting slice if it doesn't exist
+// - Set $slicer-breakpoints for existing logic
+@if $slicer-breakpoints-map
+  @if nth(map-values($slicer-breakpoints-map), 1) != 0
+    $slicer-breakpoints-map: map-merge((start: 0), $slicer-breakpoints-map) !global
+  $slicer-breakpoints: map-values($slicer-breakpoints-map) !global

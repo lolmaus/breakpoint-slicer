@@ -13,6 +13,10 @@
 // - $no-query    : [<.class>]     A class to provide the no-query fallback (see Breakpoint docs).
 =between($slice-left, $slice-right, $no-query: false)
 
+  // Get slices from map keys
+  $slice-left: slice-index($slice-left)
+  $slice-right: slice-index($slice-right)
+
   // If the slices provided are the first and the last one,
   // the breakpoint becomes meaningless
   @if ($slice-left == 1) and ($slice-right == total-slices())
