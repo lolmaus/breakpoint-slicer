@@ -2,6 +2,20 @@
 @import compass
 @import ../../breakpoint-slicer/stylesheets/breakpoint-slicer
 
+
+
+
+/////////////////////////////////////////
+// Setting up Breakpoint Slicer
+/////////////////////////////////////////
+
+$slicer-breakpoints:        0        400px       600px      800px        1050px
+
+//                          └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────
+// Slice names:                  1           2           3           4           5
+$slicer-breakpoint-names:       'xs'        's'         'm'         'l'         'xl'
+
+
 /////////////////////////////////////////
 // Testing the mixins
 /////////////////////////////////////////
@@ -11,21 +25,39 @@
   background-color: black
   color: white
 
-#at
-  +at(3)
-    +black
+.demo
+  .at
+    +at(3)
+      +black
 
-#from
-  +from(3)
-    +black
+  .from
+    +from(3)
+      +black
 
-#to
-  +to(2)
-    +black
+  .to
+    +to(2)
+      +black
 
-#between
-  +between(2,4)
-    +black
+  .between
+    +between(2,4)
+      +black
+
+.demo-names
+  .at
+    +at('m')
+      +black
+
+  .from
+    +from('m')
+      +black
+
+  .to
+    +to('m')
+      +black
+
+  .between
+    +between('s','l')
+      +black
 
 
 /////////////////////////////////////////
@@ -112,7 +144,7 @@ p
 h2
   margin-top: 2em
 
-.demo
+.demo, .demo-names
   p, .column
     font-family: monospace
     border: 1px solid black
@@ -138,4 +170,4 @@ h2
   @for $i from 1 through total-slices()
     // Setting a media query.
     +at($i)
-      content: "This window currently fits #{$i} slices."
+      content: "This window currently fits #{$i} slices."$slicer-breakpoint-names

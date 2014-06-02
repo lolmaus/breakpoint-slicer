@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Breakpoint Slicer test page</title>
   <link rel=stylesheet href=css/style.css>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -28,10 +29,24 @@
   to black at certain window widths.</p>
 
 <section class=demo>
-  <p id=at>+at(3)<br>&nbsp;&nbsp;background-color: black</p>
-  <p id=from>+from(3)<br>&nbsp;&nbsp;background-color: black</p>
-  <p id=to>+to(3)<br>&nbsp;&nbsp;background-color: black</p>
-  <p id=between>+between(2, 4)<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=at>+at(3)<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=from>+from(3)<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=to>+to(3)<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=between>+between(2, 4)<br>&nbsp;&nbsp;background-color: black</p>
+</section>
+
+
+<h2>Testing mixins using slice names</h2>
+
+<p>The default color of each paragraph is light grey.<br>
+  Breakpoint Slicer is used to change the color<br>
+  to black at certain window widths.</p>
+
+<section class=demo-names>
+  <p class=at>+at('m')<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=from>+from('m')<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=to>+to('m')<br>&nbsp;&nbsp;background-color: black</p>
+  <p class=between>+between('s', 'l')<br>&nbsp;&nbsp;background-color: black</p>
 </section>
 
 
