@@ -30,3 +30,9 @@ Initial release
 ---
 
 - Introduced `$slicer-breakpoint-names` to call slices by name rather than number.
+
+
+1.31
+----
+
+- Fixed bug: Breakpoint Slicer was failing without `$slicer-breakpoint-names` defined.
