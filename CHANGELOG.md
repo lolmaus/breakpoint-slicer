@@ -36,3 +36,9 @@ Initial release
 ----
 
 - Fixed bug: Breakpoint Slicer was failing without `$slicer-breakpoint-names` defined.
+
+
+1.31
+----
+
+- Added support for slice names to helper functions.

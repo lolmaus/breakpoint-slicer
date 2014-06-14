@@ -33,6 +33,7 @@
 //
 // Returns the left breakpoint of an Nth slice, e. g. `600px`.
 @function left-bp-of-slice($slice)
+  $slice: get-slice-id($slice)
   $min: 1
   $max: total-slices()
 
@@ -63,6 +64,7 @@
 //
 // Returns the right breakpoint of an Nth slice, e. g. `800px`.
 @function right-bp-of-slice($slice)
+  $slice: get-slice-id($slice)
   $min: 1
   $max: total-slices() - 1
 
@@ -81,6 +83,7 @@
 //
 // A shortcut for nth($slicer-breakpoints, $slice)
 @function bp($slice)
+  $slice: get-slice-id($slice)
   @return nth($slicer-breakpoints, $slice)
 
 
