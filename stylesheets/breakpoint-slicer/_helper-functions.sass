@@ -10,7 +10,7 @@
 //   - $bp       : a breakpoint, e. g. 800px or 20em
 //   - $positive : whether to return only positive or only negative values
 //                 * true - return only positive correction value (default)
-//                 * false - return only negative correction value //
+//                 * false - return only negative correction value
 @function anti-overlap-correction($bp, $positive: true)
   @each $correction in $slicer-anti-overlap-corrections
     @if (unit($bp) == unit($correction)) and (($correction > 0) == $positive)
@@ -40,7 +40,7 @@
   // Making sure that the slice provided is valid
   @if ($slice < $min) or ($slice > $max)
 
-    @warn "Wrong Slice number provided: #{$slice}. Should be between #{min} and #{$max}."
+    @warn "Wrong Slice number provided: #{$slice}. Should be between #{$min} and #{$max}."
 
   @else
 
@@ -59,7 +59,7 @@
     @return $left
 
 
-// left-bp-of-slice($slice)
+// right-bp-of-slice($slice)
 // - $slice : <slice number> A number of a slice. Should be positive integer.
 //
 // Returns the right breakpoint of an Nth slice, e. g. `800px`.
@@ -72,7 +72,7 @@
   @if $max == total-slices()
     @warn "Slice number provided: #{$slice}. It's the last slice, it has no right edge."
   @else if ($slice < $min) or ($slice > $max)
-    @warn "Wrong column number provided: #{$slice}. Should be between #{min} and #{$max}."
+    @warn "Wrong column number provided: #{$slice}. Should be between #{$min} and #{$max}."
   @else
     // Reading the right edge of the slice
     $right-bp: nth($slicer-breakpoints, $slice + 1)
@@ -87,9 +87,26 @@
   @return nth($slicer-breakpoints, $slice)
 
 
+// lbp($slice)
+//
+// A shortcut for left-bp-of-slice($slice)
+@function lbp($slice)
+  @return left-bp-of-slice($slice)
+
+
+// rbp($slice)
+//
+// A shortcut for right-bp-of-slice($slice)
+@function lbp($slice)
+  @return right-bp-of-slice($slice)
+
+
 // get-slice-id($slice-id-or-name)
+//
+// Returns a slice number corresponding to a slice name
+//
 // - $slice-id-or-name: <slice number or name> Should be either a number of a slice (positive integer)
-                                               or a name of the slice from $slicer-breakpoint-names (string)
+//                                             or a name of the slice from $slicer-breakpoint-names (string)
 @function get-slice-id($slice-id-or-name)
 
   // Treating the argument as a slice name.

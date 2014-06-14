@@ -38,7 +38,14 @@ Initial release
 - Fixed bug: Breakpoint Slicer was failing without `$slicer-breakpoint-names` defined.
 
 
-1.31
+1.32
 ----
 
 - Added support for slice names to helper functions.
+
+
+1.33
+----
+
+- Fixed a typo in an error message, brushed up comments.
+- Added `lbp()` and `rbp()` shortcuts for the `left-bp-of-slice()` and `right-bp-of-slice()` functions.
