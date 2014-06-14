@@ -261,6 +261,8 @@ The variable should contain a Sass list, each item referencing a slice (not brea
     
 Then you can use slice names instead of numbers in Breakpoint Slicer mixins: `at('m')`, `between('s', 'l')`, etc.
 
+Actually, using slice names is recommended as it saves you a lot of pain when editing slices in a mature project. Previously, if you modified the list of slices, you'd also have to edit most of mixin calls. But if use slice names in the first place, you can easily adjust their definitions (`$slicer-breakpoint-names`) when you edit the list of slices (`$slicer-breakpoints`) -- and you won't need to modify all your mixin calls.
+
 
 Using Breakpoint Slicer together with vanilla Breakpoint or Respond To
 ----------------------------------------------------------------------
