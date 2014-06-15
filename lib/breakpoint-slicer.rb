@@ -4,6 +4,6 @@ require 'breakpoint'
 Compass::Frameworks.register("breakpoint-slicer", :path => "#{File.dirname(__FILE__)}/..")
 
 module BreakpointSlicer
-  VERSION = "1.3.3"
-  DATE = "2014-06-14"
+  VERSION = "1.3.4"
+  DATE = "2014-06-15"
 end
