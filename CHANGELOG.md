@@ -49,3 +49,10 @@ Initial release
 
 - Fixed a typo in an error message, brushed up comments.
 - Added `lbp()` and `rbp()` shortcuts for the `left-bp-of-slice()` and `right-bp-of-slice()` functions.
+
+
+1.34
+----
+
+- Removed support for slices names from the `bp()` function. It made no sense.
+- Fixed a bug with `lpm()` calling `right-bp-of-slice()`.
