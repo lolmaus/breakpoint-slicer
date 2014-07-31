@@ -6,7 +6,6 @@ Gem::Specification.new do |s|
   s.name = "breakpoint-slicer"
   s.version = BreakpointSlicer::VERSION
   s.date = BreakpointSlicer::DATE
-  s.rubyforge_project = "singularitygs"
   s.rubygems_version = "1.7.2"
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2")
 
