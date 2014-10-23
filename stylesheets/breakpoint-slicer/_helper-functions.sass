@@ -123,3 +123,33 @@
 
     // Assume an id was given in the first place
     @return $slice-id-or-name
+
+
+// prev-slice($slice-id-or-name)
+//
+// Returns previous slice id for the given slice
+@function prev-slice($slice-id-or-name)
+
+  $slice-id: get-slice-id($slice-id-or-name)
+
+  @if $slice-id > 1
+    $slice-id: $slice-id - 1
+  @else
+    @warn "Previous slice for the first slice requested"
+
+  @return $slice-id
+
+
+// next-slice($slice-id-or-name)
+//
+// Returns next slice id for the given slice
+@function prev-slice($slice-id-or-name)
+
+  $slice-id: get-slice-id($slice-id-or-name)
+
+  @if $slice-id < total-slices()
+    $slice-id: $slice-id + 1
+  @else
+    @warn "Previous slice for the first slice requested"
+
+  @return $slice-id
