@@ -56,3 +56,9 @@ Initial release
 
 - Removed support for slices names from the `bp()` function. It made no sense.
 - Fixed a bug with `lpm()` calling `right-bp-of-slice()`.
+
+
+1.35
+----
+
+- Added `prev-slice()` and `next-slice()` helper functions.
