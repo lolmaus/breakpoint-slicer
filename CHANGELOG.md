@@ -62,3 +62,9 @@ Initial release
 ----
 
 - Added `prev-slice()` and `next-slice()` helper functions.
+
+
+1.36
+----
+
+- Project published on Bower.
