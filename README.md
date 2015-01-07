@@ -300,6 +300,6 @@ Licensed under MIT/GPL.
 
   [1]: https://github.com/Team-Sass/breakpoint
   [2]: http://susy.oddbird.net/
-  [3]: https://github.com/Team-Sass/Singularity
+  [3]: http://bundler.io/
   [4]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
 
