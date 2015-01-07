@@ -1,6 +1,6 @@
 <img alt="an egg slicer" src="http://i.imgur.com/GmQNEMG.jpg" align="right">
 
-Breakpoint Slicer
+Breakpoint Slicer [![Gem Version](https://badge.fury.io/rb/breakpoint-slicer.svg)](http://badge.fury.io/rb/breakpoint-slicer)
 =================
 
 **Slice media queries with no effort**
