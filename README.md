@@ -158,7 +158,7 @@ Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoi
 
 ### Creating a responsive grid
 
-With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly. The example below makes use of [Susy][2].
+With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly. The example below makes use of [Susy][2] v1.
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
     $amount-of-slices:   length($slicer-breakpoints);
@@ -180,7 +180,7 @@ With Breakpoint Slicer you can easily cycle through scices and apply column span
 
 ### Leveraging Singularity
 
-[Singularity][3] is the most modern and versatile SASS grid system. It [requires][4] breakpoints to be provided individually.
+[Singularity][5] is the most modern and versatile SASS grid system. It [requires][4] breakpoints to be provided individually.
 
 Breakpoint Slicer offers a function `bp()` that returns the left breakpoint of a slice asked for. E. g. `bp(2)` would return `600px`. Effectively, `bp()` is a shortcut for `nth()`.
 
@@ -302,4 +302,5 @@ Licensed under MIT/GPL.
   [2]: http://susy.oddbird.net/
   [3]: http://bundler.io/
   [4]: https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#responsive-grids
+  [5]: https://github.com/at-import/Singularity
 
