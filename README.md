@@ -158,7 +158,7 @@ Then you can use Breakpoint Slicer's mixins the same way as you use the Breakpoi
 
 ### Creating a responsive grid
 
-With Breakpoint Slicer you can easily cycle through scices and apply column spans accordingly. The example below makes use of [Susy][2] v1.
+With Breakpoint Slicer you can easily cycle through slices and apply column spans accordingly. The example below makes use of [Susy][2] v1.
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
     $amount-of-slices:   length($slicer-breakpoints);
