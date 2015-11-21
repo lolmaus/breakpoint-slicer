@@ -26,45 +26,51 @@ Initial release
 - Introduced `$slicer-anti-overlap-corrections` to prevent slices from overlapping.
 
 
-1.3
+1.3.
 ---
 
 - Introduced `$slicer-breakpoint-names` to call slices by name rather than number.
 
 
-1.31
+1.3.1
 ----
 
 - Fixed bug: Breakpoint Slicer was failing without `$slicer-breakpoint-names` defined.
 
 
-1.32
+1.3.2
 ----
 
 - Added support for slice names to helper functions.
 
 
-1.33
+1.3.3
 ----
 
 - Fixed a typo in an error message, brushed up comments.
 - Added `lbp()` and `rbp()` shortcuts for the `left-bp-of-slice()` and `right-bp-of-slice()` functions.
 
 
-1.34
+1.3.4
 ----
 
 - Removed support for slices names from the `bp()` function. It made no sense.
 - Fixed a bug with `lpm()` calling `right-bp-of-slice()`.
 
 
-1.35
+1.3.5
 ----
 
 - Added `prev-slice()` and `next-slice()` helper functions.
 
 
-1.36
+1.3.6
 ----
 
 - Project published on Bower.
+
+
+1.4.0
+----
+
+- Project published on npm and Eyeglass.
