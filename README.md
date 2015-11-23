@@ -125,17 +125,48 @@ The code behind the demo page resides here: https://github.com/lolmaus/breakpoin
 Installation
 ------------
 
-Breakpoint Slicer is installed as any other Compass extension.
+### Compass
 
-Run `gem install breakpoint-slicer` in a terminal, then add `require 'breakpoint-slicer'` to `config.rb` and `@import 'breakpoint-slicer';` in th beginning of your SCSS code.
+Breakpoint Slicer can be installed as any other Compass extension. Requires Bundler.
 
-Instead of installing the gem manually, consider using [Bundler][3].
+`Gemfile`:
+
+```rb
+gem 'breakpoint'
+gem 'breakpoint-slicer'
+```
+
+`config.rb`:
+
+```rb
+require 'breakpoint'
+require 'breakpoint-slicer'
+```
+
+### npm
+
+    npm install --save-dev breakpoint breakpoint-slicer
+    
+### Eyeglass
+
+No idea! I'm not using Eyeglass yet. I've added an Eyeglass config, please check out if it's working and report [here](https://github.com/lolmaus/breakpoint-slicer/issues/17).
 
 
 Usage
 -----
 
-Enlist your breakpoints in the `$slicer-breakpoints` variable:
+### Preparation
+
+Import `breakpoint` and `breakpoint-slicer`:
+
+```scss
+@import 'breakpoint';
+@import 'breakpoint-slicer';
+```
+
+Note: depending on your environment, the path to libraries may be different. You might also need to adjust you Sass import paths.
+
+Then list your breakpoints in the `$slicer-breakpoints` variable:
 
     $slicer-breakpoints: 0 400px 600px 800px 1050px;
     

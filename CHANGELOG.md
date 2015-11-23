@@ -74,3 +74,9 @@ Initial release
 ----
 
 - Project published on npm and Eyeglass.
+
+
+2.0.0
+----
+
+- `breakpoint` is no longer imported implicitly. Manual `@import breakpoint` required.
