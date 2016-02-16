@@ -100,7 +100,7 @@ Some mixins become synonomous when used for the last slice:
                                        ├─────────────────────────────────────────>
                                        ·
                                        ·               between(2, 5)
-                                       ├─────────────────────────────────────────>
+                                       ├─────────────────────────────────────────┤
 
 …and some become meaningless (in these cases media query is omitted):
 
