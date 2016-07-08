@@ -1,0 +1,8 @@
+// Default values
+@import "breakpoint-slicer/variables";
+
+// Helper functions
+@import "breakpoint-slicer/helper-functions";
+
+// The magic!
+@import "breakpoint-slicer/mixins";
