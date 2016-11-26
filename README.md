@@ -145,7 +145,7 @@ require 'breakpoint-slicer'
 
 ### npm
 
-    npm install --save-dev breakpoint breakpoint-slicer
+    npm install --save-dev breakpoint-sass breakpoint-slicer
     
 ### Eyeglass
 
@@ -160,7 +160,7 @@ Usage
 Import `breakpoint` and `breakpoint-slicer`:
 
 ```scss
-@import 'breakpoint';
+@import 'breakpoint'; // or 'breakpoint-sass' when using npm
 @import 'breakpoint-slicer';
 ```
 
