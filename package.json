@@ -33,9 +33,9 @@
   "homepage": "https://github.com/lolmaus/breakpoint-slicer#readme",
   "eyeglass": {
     "exports": "eyeglass-exports.js",
-    "needs": "^0.8.3"
+    "needs": ">=0.8.3"
   },
   "devDependencies": {
-    "breakpoint-sass": "^2.6.1"
+    "breakpoint-sass": ">=2.6.1"
   }
 }
