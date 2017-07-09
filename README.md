@@ -7,7 +7,7 @@ Breakpoint Slicer [![Gem Version](https://badge.fury.io/rb/breakpoint-slicer.svg
 
 Along with Respond To, Breakpoint Slicer is an alternative syntax for [Breakpoint][1]. It offers a powerful yet very simple way to slice your media queries.
 
-Just list your breakpoints and Breakpoint Slicer will magically turn them into slices. You can address the with their sequence numbers:
+Just list your breakpoints and Breakpoint Slicer will magically turn them into slices. You can address them with their sequence numbers:
 
     $slicer-breakpoints:        0        400px       600px      800px        1050px
     
