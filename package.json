@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "A very quick and efficient syntax for Breakpoint",
   "main": "stylesheets/_breakpoint-slicer.sass",
+  "files": [
+    "stylesheets/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
