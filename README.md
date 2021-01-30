@@ -56,14 +56,14 @@ Concept
 
 Most media query heleprs operate with breakpoints. Here they are on a scale:
 
-     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px
+     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px       
                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────>
 
 Breakpoint Slicer operates with *slices* instead of breakpoints. A *slice* is a range of viewport sizes between two consequetive breakpoints.
 
-     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px
+     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px       
                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────>
-     Slice:            xxs        xs        s         m         l         xl       xxl       xxxl
+     Slice:            xxs        xs        s         m         l         xl       xxl       xxxl   
 
 Slices make it much easier to reason about media queries. Take any viewport width, and you can say which slice it corresponds to.
 
@@ -85,21 +85,21 @@ Styles under `to(m)`        are applied when browser window width is inside the 
 
 Styles under `between(s, l)` are applied when browser window width is inside the `s` slice, `l` slice (inclusive) and any slices in between, if any.
 
-     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px
+     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px       
                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────>
-     Slice:        ·   xxs        xs   ·    s    ·    m    ·    l    ·    xl       xxl       xxxl
-                   ·                   ·         ·         ·         ·
-                   ·                   ·         ·  at(m)  ·         ·
-                   ·                   ·         ├────────┤·         ·
-                   ·                   ·         ·         ·         ·
-                   ·                   ·         · from(m) ·         ·
+     Slice:        ·   xxs        xs   ·    s    ·    m    ·    l    ·    xl       xxl       xxxl   
+                   ·                   ·         ·         ·         ·                              
+                   ·                   ·         ·  at(m)  ·         ·                              
+                   ·                   ·         ├────────┤·         ·                              
+                   ·                   ·         ·         ·         ·                              
+                   ·                   ·         · from(m) ·         ·                              
                    ·                   ·         ├─────────────────────────────────────────────────>
-                   ·                   ·                   ·         ·
-                   ·                   ·            to(m)  ·         ·
-                   ├──────────────────────────────────────┤·         ·
-                                       ·                             ·
-                                       ·         between(s, l)       ·
-                                       ├────────────────────────────┤·
+                   ·                   ·                   ·         ·                              
+                   ·                   ·            to(m)  ·         ·                              
+                   ├──────────────────────────────────────┤·         ·                              
+                                       ·                             ·                              
+                                       ·         between(s, l)       ·                              
+                                       ├────────────────────────────┤·                              
 
 
 Mixin incovation   | Resulting media query
@@ -116,34 +116,34 @@ Note that each slice includes its left breakpoint but does not include its right
 
 Note that the last slice does not have a right edge. When it is invoked, the media query will have no max-width value.
 
-Some mixin invocations are synonomous:
+Some mixin invocations are **synonomous**:
 
-     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px
+     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px       
                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────>
-     Slice:        ·   xxs   ·    xs   ·    s         m         l         xl       xxl   ·   xxxl
-                   ·         ·         ·                                                 ·
-                   · at(xxs) ·         ·                                                 ·  at(xxxl)
-                   ├────────┤·         ·                                                 ├─────────>
-                   ·         ·         ·                                                 ·
-                   · to(xxs) ·         ·                                                 · from(xxxl)
-                   ├────────┤·         ·                                                 ├─────────>
-                   ·                   ·
-                   ·      to(xs)       ·  from(s)
-                   ├──────────────────┤├───────────────────────────────────────────────────────────>
-                   ·                   ·
-                   · between(xxs, xs)  ·                       between(s, xxxl)
-                   ├──────────────────┤├───────────────────────────────────────────────────────────>
+     Slice:        ·   xxs   ·    xs        s         m    ·    l         xl       xxl   ·   xxxl   
+                   ·         ·                             ·                             ·          
+                   · at(xxs) ·                             ·                             ·  at(xxxl)
+                   ├────────┤·                             ·                             ├─────────>
+                   ·         ·                             ·                             ·          
+                   · to(xxs) ·                             ·                             · from(xxxl)
+                   ├────────┤·                             ·                             ├─────────>
+                   ·                                       ·                                        
+                   ·                               to(m)   ·   from(l)                              
+                   ├──────────────────────────────────────┤├───────────────────────────────────────>
+                   ·                                       ·                                        
+                   ·           between(xxs, m)             ·           between(l, xxxl)             
+                   ├──────────────────────────────────────┤├───────────────────────────────────────>
 
-…and some become meaningless and will produce an error, preventing you from accidentally covering all viewports with a useless media query:
+…and some become meaningless and **will produce an error**, preventing you from accidentally covering all viewports with a useless media query:
 
-     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px
+     Breakpoint:   0       200px     400px     600px     800px     1000px    1200px    1400px       
                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────>
-     Slice:        ·   xxs        xs        s         m         l         xl       xxl       xxxl
-                   ·                   
-                   ·  from(xxs)
+     Slice:        ·   xxs        xs        s         m         l         xl       xxl       xxxl   
+                   ·                                                                                
+                   ·  from(xxs)                                                                     
                    ├───────────────────────────────────────────────────────────────────────────────>
-                   ·                   
-                   ·                                                                      to(xxxl)
+                   ·                                                                                
+                   ·                                                                      to(xxxl)  
                    ├───────────────────────────────────────────────────────────────────────────────>
 
 

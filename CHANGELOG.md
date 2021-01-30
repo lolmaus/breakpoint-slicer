@@ -13,6 +13,7 @@ It's time to shed the legacy practices and redesign Breakpoint Slicer with simpl
 
 ### ⚠ Breaking changes
 - New syntax for defining slices as a map rather than two arrays.
+- New default slice definitions, every 200px, up to 1400px, xxs—xxxxl.
 - New variable names. With the new Sass module system, namespacing is no longer necessary.
 - Addressing slices by indices is not supported.
 - Iterating slices hasn't been reimplemented (now that float-based grid systems have given way to flexbox and css-grid, iteration is no logner necessary).
