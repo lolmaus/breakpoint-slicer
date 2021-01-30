@@ -453,7 +453,7 @@ $media: null;
 
 
 /// Wraps CSS code with a media query confined by a given slice
-/// @access private
+/// @access public
 /// @arg {String} $slice - name of slice
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @arg {Map | null} $media [globally defined $media] - a media query to prend the result with
