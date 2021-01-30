@@ -4,7 +4,8 @@ sort:
   - line
 descriptionPath: README.md
 groups:
-  undefined: API docs
+  api: API Docs
+  undefined: Other
 basePath: https://github.com/lolmaus/breakpoint-slicer/tree/gen-3
 package:
   name: breakpoint-slicer
