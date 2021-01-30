@@ -1,0 +1,688 @@
+@use "sass:map";
+@use "index" as bp;
+@use "node_modules/sass-true/sass/true" as *;
+
+@include test-module('Functions') {
+  // @include test-module('list-remove') {
+  //   @each $case in (
+  //     (name: "a comma", list: (0, 1, 2), index: 1, expected: (1, 2)),
+  //     (name: "b comma", list: (0, 1, 2), index: 2, expected: (0, 2)),
+  //     (name: "c comma", list: (0, 1, 2), index: 3, expected: (0, 1)),
+  //     (name: "a space", list: (0 1 2), index: 1, expected: (1 2)),
+  //     (name: "b space", list: (0 1 2), index: 2, expected: (0 2)),
+  //     (name: "c spcae", list: (0 1 2), index: 3, expected: (0 1)),
+  //   ) {
+  //     $name: map.get($case, "name");
+  //     $list: map.get($case, "list");
+  //     $index: map.get($case, "index");
+  //     $expected: map.get($case, "expected");
+
+  //     @include test($name) {
+  //       $result: bp.list-remove($list, $index);
+  //       @include assert-equal($result, $expected);
+  //     }
+  //   }
+  // }
+
+
+  // @include test-module('list-swap') {
+  //   @each $case in (
+  //     (name: "normal with numbers", list: (0, 1, 2), index1: 1, index2: 2, expected: (1, 0, 2)),
+  //     (name: "normal with strings", list: ("foo", "bar", "baz"), index1: 3, index2: 1, expected: ("baz", "bar", "foo")),
+  //     (name: "same position", list: (0, 1, 2), index1: 1, index2: 1, expected: (0, 1, 2)),
+  //   ) {
+  //     $name: map.get($case, "name");
+  //     $list: map.get($case, "list");
+  //     $index1: map.get($case, "index1");
+  //     $index2: map.get($case, "index2");
+  //     $expected: map.get($case, "expected");
+
+  //     @include test($name) {
+  //       $result: bp.list-swap($list, $index1, $index2);
+  //       @include assert-equal($result, $expected);
+  //     }
+  //   }
+  // }
+
+
+  // @include test-module('list-sort-numeric') {
+  //   @each $case in (
+  //     (name: "alrady sorted", given: (-5, 0, 2, 25234526), expected: (-5, 0, 2, 25234526)),
+  //     (name: "normal", given: (-5, 25234526, 0, 2), expected: (-5, 0, 2, 25234526)),
+  //   ) {
+  //     $name: map.get($case, "name");
+  //     $given: map.get($case, "given");
+  //     $expected: map.get($case, "expected");
+
+  //     @include test($name) {
+  //       $result: bp.list-sort-numeric($given);
+  //       @include assert-equal($result, $expected);
+  //     }
+  //   }
+  // }
+
+
+  // @include test-module('map-sort-keys') {
+  //   @each $case in (
+  //     (name: "already sorted", given: (0: "foo", 200: "bar", 400: "baz"), expected: (0, 200, 400)),
+  //     (name: "normal", given: (200: "bar", 0: "foo", 400: "baz"), expected: (0, 200, 400)),
+  //   ) {
+  //     $name: map.get($case, "name");
+  //     $given: map.get($case, "given");
+  //     $expected: map.get($case, "expected");
+
+  //     @include test($name) {
+  //       $result: bp.map-sort-keys($given);
+  //       @include assert-equal(map.keys($result), $expected);
+  //     }
+  //   }
+  // }
+
+
+  @include test-module('map-sort-values') {
+    @each $case in (
+      (name: "already sorted", given: ("foo": 0, "bar": 200, "baz": 400), expected: (0, 200, 400)),
+      (name: "normal", given: ("bar": 200, "foo": 0, "baz": 400), expected: (0, 200, 400)),
+    ) {
+      $name: map.get($case, "name");
+      $given: map.get($case, "given");
+      $expected: map.get($case, "expected");
+
+      @include test($name) {
+        $result: bp.map-sort-values($given);
+        @include assert-equal(map.values($result), $expected);
+      }
+    }
+  }
+
+
+  @include test-module('index-of-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: "xxs", expected: 1),
+        (given: "xs", expected: 2),
+        (given: "s", expected: 3),
+        (given: "m", expected: 4),
+        (given: "l", expected: 5),
+        (given: "xl", expected: 6),
+        (given: "xxl", expected: 7),
+        (given: "xxxl", expected: 8),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.index-of-slice($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: "m", expected: 2),
+        (given: "s", expected: 1),
+        (given: "l", expected: 3),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.index-of-slice($given, $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+  }
+
+
+  @include test-module('is-first-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: "xxs", expected: true),
+        (given: "xs", expected: false),
+        (given: "s", expected: false),
+        (given: "m", expected: false),
+        (given: "l", expected: false),
+        (given: "xl", expected: false),
+        (given: "xxl", expected: false),
+        (given: "xxxl", expected: false),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.is-first-slice($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: "m", expected: false),
+        (given: "s", expected: true),
+        (given: "l", expected: false),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.is-first-slice($given, $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+  }
+
+
+  @include test-module('is-last-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: "xxs", expected: false),
+        (given: "xs", expected: false),
+        (given: "s", expected: false),
+        (given: "m", expected: false),
+        (given: "l", expected: false),
+        (given: "xl", expected: false),
+        (given: "xxl", expected: false),
+        (given: "xxxl", expected: true),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.is-last-slice($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: "m", expected: false),
+        (given: "l", expected: true),
+        (given: "s", expected: false),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.is-last-slice($given, $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+  }
+
+
+  @include test-module('next-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: "xxs", expected: "xs"),
+        (given: "xs", expected: "s"),
+        (given: "s", expected: "m"),
+        (given: "m", expected: "l"),
+        (given: "l", expected: "xl"),
+        (given: "xl", expected: "xxl"),
+        (given: "xxl", expected: "xxxl"),
+        (given: "xxxl", expected: null),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.next-slice($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: "m", expected: "l"),
+        (given: "l", expected: null),
+        (given: "s", expected: "m"),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.next-slice($given, $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+  }
+
+
+  @include test-module('start-bp-of-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: "xxs", expected: null),
+        (given: "xs", expected: 200),
+        (given: "s", expected: 400),
+        (given: "m", expected: 600),
+        (given: "l", expected: 800),
+        (given: "xl", expected: 1000),
+        (given: "xxl", expected: 1200),
+        (given: "xxxl", expected: 1400),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.start-bp-of-slice($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: "m", expected: 350),
+        (given: "l", expected: 800),
+        (given: "s", expected: null),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.start-bp-of-slice($given, $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+  }
+
+
+  @include test-module('end-bp-of-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: "xxs", expected: 199),
+        (given: "xs", expected: 399),
+        (given: "s", expected: 599),
+        (given: "m", expected: 799),
+        (given: "l", expected: 999),
+        (given: "xl", expected: 1199),
+        (given: "xxl", expected: 1399),
+        (given: "xxxl", expected: null),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.end-bp-of-slice($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: "m", expected: 799),
+        (given: "l", expected: null),
+        (given: "s", expected: 349),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.end-bp-of-slice($given, $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+  }
+
+
+  @include test-module('query-for-slice') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: xxs, expected: "(max-width: 199px)"),
+        (given: (null xxs), expected: "(max-width: 199px)"),
+        // (given: (xxs null), expected: "throw"),
+        (given: xs, expected: "(min-width: 200px) and (max-width: 399px)"),
+        (given: (null xs), expected: "(max-width: 399px)"),
+        (given: (xs null), expected: "(min-width: 200px)"),
+        (given: l, expected: "(min-width: 800px) and (max-width: 999px)"),
+        (given: (null l), expected: "(max-width: 999px)"),
+        (given: (l null), expected: "(min-width: 800px)"),
+        (given: (xxxl null), expected: "(min-width: 1400px)"),
+        // (given: (null xxxl), expected: "throw"),
+        (given: (m l), expected: "(min-width: 600px) and (max-width: 999px)"),
+        (given: (s l), expected: "(min-width: 400px) and (max-width: 999px)"),
+        (given: (xxs l), expected: "(max-width: 999px)"),
+        (given: (s xxxl), expected: "(min-width: 400px)"),
+        // (given: (l xs), expected: "throw"),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.query-for-slice($given...);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: s, expected: "(max-width: 349px)"),
+        (given: (null s), expected: "(max-width: 349px)"),
+        // (given: (s null), expected: "throw"),
+        (given: m, expected: "(min-width: 350px) and (max-width: 799px)"),
+        (given: (null m), expected: "(max-width: 799px)"),
+        (given: (m null), expected: "(min-width: 350px)"),
+        (given: l, expected: "(min-width: 800px)"),
+        // (given: (null l), expected: "throw"),
+        (given: (l null), expected: "(min-width: 800px)"),
+        (given: (s m), expected: "(max-width: 799px)"),
+        (given: (m l), expected: "(min-width: 350px)"),
+        // (given: (s l), expected: "throw"),
+        // (given: (l m), expected: "throw"),
+        // (given: (), expected: "throw"),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.query-for-slice($given..., $slices: (s: 0, m: 350, l: 800));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test('custom media') {
+      $result: bp.query-for-slice(null, s, $slices: (s: 0, m: 350, l: 800), $media: "monochrome");
+      @include assert-equal($result, "monochrome and (max-width: 349px)");
+    }
+  }
+
+
+  @include test-module('query-for-slices') {
+    @include test-module('default slices') {
+      @each $case in (
+        (given: (xxs), expected: "(max-width: 199px)"),
+        (given: (xs), expected: "(min-width: 200px) and (max-width: 399px)"),
+        (given: (xs null), expected: "(min-width: 200px)"),
+        (given: (l), expected: "(min-width: 800px) and (max-width: 999px)"),
+        (given: (xxxl), expected: "(min-width: 1400px)"),
+        (given: (xxs, xs), expected: "(max-width: 199px), (min-width: 200px) and (max-width: 399px)"),
+        (given: (xxs, s), expected: "(max-width: 199px), (min-width: 400px) and (max-width: 599px)"),
+        (given: (xxs xs), expected: "(max-width: 399px)"),
+        (given: (xxs s), expected: "(max-width: 599px)"),
+        (given: (xxs, s l), expected: "(max-width: 199px), (min-width: 400px) and (max-width: 999px)"),
+        (given: (xxs, s l, xxl), expected: "(max-width: 199px), (min-width: 400px) and (max-width: 999px), (min-width: 1200px) and (max-width: 1399px)"),
+        (given: (xxs, s l, xxxl), expected: "(max-width: 199px), (min-width: 400px) and (max-width: 999px), (min-width: 1400px)"),
+        (given: (s l, xxl), expected: "(min-width: 400px) and (max-width: 999px), (min-width: 1200px) and (max-width: 1399px)"),
+        (given: (s l, xxxl), expected: "(min-width: 400px) and (max-width: 999px), (min-width: 1400px)"),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.query-for-slices($given);
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      @each $case in (
+        (given: (s), expected: "(max-width: 349px)"),
+        (given: (m), expected: "(min-width: 350px) and (max-width: 799px)"),
+        (given: (m null), expected: "(min-width: 350px)"),
+        (given: (null m), expected: "(max-width: 799px)"),
+        (given: (xl), expected: "(min-width: 1050px)"),
+        (given: (s, m), expected: "(max-width: 349px), (min-width: 350px) and (max-width: 799px)"),
+        (given: (s, l), expected: "(max-width: 349px), (min-width: 800px) and (max-width: 1049px)"),
+        (given: (s, l, xl), expected: "(max-width: 349px), (min-width: 800px) and (max-width: 1049px), (min-width: 1050px)"),
+        (given: (s, l null), expected: "(max-width: 349px), (min-width: 800px)"),
+        (given: (null s, l null), expected: "(max-width: 349px), (min-width: 800px)"),
+        // (given: (s m l), expected: "throw"),
+        // (given: (), expected: "throw"),
+        // (given: (l m, s), expected: "throw"),
+      ) {
+        $given: map.get($case, "given");
+        $expected: map.get($case, "expected");
+
+        @include test($given) {
+          $result: bp.query-for-slices($given, $slices: (s: 0, m: 350, l: 800, xl: 1050));
+          @include assert-equal($result, $expected);
+        }
+      }
+    }
+
+    @include test-module('custom media') {
+      // @include test('single') {
+      //   $result: bp.query-for-slices((s, l null), $slices: (s: 0, m: 350, l: 800), $media: "monochrome");
+      //   @include assert-equal($result, "monochrome and (max-width: 349px), monochrome and (min-width: 800px)");
+      // }
+
+      @include test('multiple') {
+        $result: bp.query-for-slices((s, l null), $slices: (s: 0, m: 350, l: 800), $media: (monochrome, speech));
+        @include assert-equal($result, "monochrome and (max-width: 349px), monochrome and (min-width: 800px), speech and (max-width: 349px), speech and (min-width: 800px)");
+      }
+    }
+  }
+}
+
+
+
+@include test-module('Mixins') {
+  @include test-module('query') {
+    @include test-module('default slices') {
+      $case: (xxs, s, l xl, xxxl);
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.query($case) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (max-width: 199px), (min-width: 400px) and (max-width: 599px), (min-width: 800px) and  (max-width: 1199px), (min-width: 1400px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      $case: (s, m l);
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.query($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (max-width: 349px), (min-width: 350px) and (max-width: 1049px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include test-module('between') {
+    @include test-module('default slices') {
+      $case: (s, l);
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.between($case...) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (min-width: 400px) and (max-width: 999px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      $case: (m, l);
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.between($case..., $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (min-width: 350px) and (max-width: 1049px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include test-module('from') {
+    @include test-module('default slices') {
+      $case: s;
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.from($case) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (min-width: 400px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      $case: m;
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.from($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (min-width: 350px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include test-module('to') {
+    @include test-module('default slices') {
+      $case: s;
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.to($case) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (max-width: 599px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      $case: m;
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.to($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (max-width: 799px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  @include test-module('at') {
+    @include test-module('default slices') {
+      $case: s;
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.at($case) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (min-width: 400px) and (max-width: 599px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    @include test-module('custom slices') {
+      $case: m;
+
+      @include test($case) {
+        @include assert {
+          @include output {
+            @include bp.at($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+              color: red;
+            }
+          }
+
+          @include expect {
+            @media (min-width: 350px) and (max-width: 799px) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

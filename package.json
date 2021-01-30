@@ -1,0 +1,33 @@
+{
+  "name": "breakpoint-slicer",
+  "version": "3.0.0-alpha.0",
+  "description": "Slice media queries with ease",
+  "main": "test.js",
+  "repository": "git+https://github.com/lolmaus/breakpoint-slicer.git",
+  "author": "Andrey Mikhaylov (lolmaus) <lolmaus@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "sass": "^1.32.5",
+    "sass-true": "^6.0.1",
+    "sassdoc": "^2.7.3"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "jest --watch",
+    "sassdoc": "sassdoc *.s?ss"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node",
+      "scss",
+      "sass"
+    ]
+  }
+}
