@@ -47,7 +47,7 @@ Breakpoint Slicer had been evolving, improving its ergonomics while maintaining 
 
 It's time to shed the legacy and redesign Breakpoint Slicer with simplicity and leveraging new Sass features such as modules and maps.
 
-See [CHANGELOG.md](https://github.com/lolmaus/breakpoint-slicer/blob/gen-1/CHANGELOG.md) for the list of breaking changes (there are many! 🙈).
+See [CHANGELOG.md](https://github.com/lolmaus/breakpoint-slicer/blob/gen-3/CHANGELOG.md) for the list of breaking changes (there are many! 🙈).
 
 
 
