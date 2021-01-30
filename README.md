@@ -43,7 +43,7 @@ Status
 
 Breakpoint Slicer v.3 is a complete rewrite.
 
-Breakpoint Slicer had been evolving, improving its ergonomics while maintaining compatibility with old versions and supporting now obsolete practices. As a result, it a was a bit messy.
+Breakpoint Slicer had been evolving, improving its ergonomics while maintaining compatibility with old versions and supporting now obsolete practices. As a result, it ended up being a bit messy.
 
 It's time to shed the legacy and redesign Breakpoint Slicer with simplicity and leveraging new Sass features such as modules and maps.
 
