@@ -1,0 +1,379 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Breakpoint-slicer - v3.0.0-alpha.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Breakpoint-slicer - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Slice media queries with ease</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Breakpoint-slicer - 3.0.0-alpha.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="slices" data-type="variable"><a href="#undefined-variable-slices">slices</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="media" data-type="variable"><a href="#undefined-variable-media">media</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="map-sort-values" data-type="function"><a href="#undefined-function-map-sort-values">map-sort-values</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="index-of-slice" data-type="function"><a href="#undefined-function-index-of-slice">index-of-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="is-first-slice" data-type="function"><a href="#undefined-function-is-first-slice">is-first-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="is-last-slice" data-type="function"><a href="#undefined-function-is-last-slice">is-last-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="next-slice" data-type="function"><a href="#undefined-function-next-slice">next-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="start-bp-of-slice" data-type="function"><a href="#undefined-function-start-bp-of-slice">start-bp-of-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="end-bp-of-slice" data-type="function"><a href="#undefined-function-end-bp-of-slice">end-bp-of-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="query-for-slice" data-type="function"><a href="#undefined-function-query-for-slice">query-for-slice</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="query-for-slices" data-type="function"><a href="#undefined-function-query-for-slices">query-for-slices</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="at" data-type="mixin"><a href="#undefined-mixin-at">at</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="from" data-type="mixin"><a href="#undefined-mixin-from">from</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="to" data-type="mixin"><a href="#undefined-mixin-to">to</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="between" data-type="mixin"><a href="#undefined-mixin-between">between</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="query" data-type="mixin"><a href="#undefined-mixin-query">query</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-slices"><h3 class="item__heading"><a class="item__name" href="#variable-slices">slices</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$slices: (
+  xxs:     0,
+  xs:    200,
+  s:     400,
+  m:     600,
+  l:     800,
+  xl:   1000,
+  xxl:  1200,
+  xxxl: 1400,
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>The default slices map.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Map</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-index-of-slice"><code>index-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-first-slice"><code>is-first-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-last-slice"><code>is-last-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-last-slice"><code>is-last-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-next-slice"><code>next-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-start-bp-of-slice"><code>start-bp-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-start-bp-of-slice"><code>start-bp-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-end-bp-of-slice"><code>end-bp-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-end-bp-of-slice"><code>end-bp-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-end-bp-of-slice"><code>end-bp-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slice"><code>query-for-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slice"><code>query-for-slice</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-variable-media"><h3 class="item__heading"><a class="item__name" href="#variable-media">media</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$media: null;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A list of media types and features to be prepended to every media query generated by breakpoint-slicer. Can assume one of the following values:</p><ul><li><code>null</code> (default) — nothing is prepended</li><li>a single media query, e. g. <code>monochrome and (orientation: portrait)</code></li><li>a comma-separated list of media queries, e. g. <code>screen, print</code></li></ul></div><h3 class="item__sub-heading">Type</h3><p><code>Null&lt;/code&gt; or &lt;code&gt;List</code></p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>$media: null;
+
+.foo {
+  @include from(s) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media (min-width: 400px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>$media: monochrome and (orientation: portrait);
+
+.foo {
+  @include from(s) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media monochrome and (orientation: portrait) and (min-width: 400px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>$media: screen, print;
+
+.foo {
+  @include from(s) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media screen and (min-width: 400px), print and (min-width: 400px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slice"><code>query-for-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slice"><code>query-for-slice</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-map-sort-values"><h3 class="item__heading"><a class="item__name" href="#function-map-sort-values">map-sort-values</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function map-sort-values($map) { 
+  // Transform map to zipped list
+  $keys: ();
+  $values: ();
+
+  @each $key, $val in $map {
+    $keys: append($keys, $key);
+    $values: append($values, $val);
+  }
+
+  $list: zip($keys, $values);
+
+  // Sort zipped list and create sorted map
+  $sortedMap: ();
+  @while length($list) &gt; 0 {
+
+    // Find smallest pair
+    $smallestPair: nth($list, 1);
+    @each $pair in $list {
+      $value: nth($pair, 2);
+      $smallestValue: nth($smallestPair, 2);
+      @if $value &lt; $smallestValue {
+        $smallestPair: $pair;
+      }
+    }
+
+    // Add smallest pair to sorted map
+    $key: nth($smallestPair, 1);
+    $value: nth($smallestPair, 2);
+    $sortedMap: map-merge($sortedMap, ($key: $value));
+
+    // Remove from list smallest pair
+    $newList: ();
+    $smallestPairIndex: index($list, $smallestPair);
+    @for $i from 1 through length($list) {
+      @if $i != $smallestPairIndex {
+        $newList: append($newList, nth($list, $i), &quot;space&quot;);
+      }
+    }
+    $list: $newList;
+  }
+
+  @return $sortedMap;
+ }" data-collapsed="@function map-sort-values($map) { ... }"><code>@function map-sort-values($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Sorts a Sass map by its values. Values must be numeric.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc"><p>a map to sort</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Map</code> &mdash;<p>sorted map</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>map-sort-values((a: 200, b: 0))
+// =&gt; (b: 0, a: 200)</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-index-of-slice"><code>index-of-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-next-slice"><code>next-slice</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="https://github.com/iamandrewluca/map-sort-by-values/blob/8ad9fb6b4fa3eee8e8f79ddb305c6b3f8f4ad2c3/_index.scss">https://github.com/iamandrewluca/map-sort-by-values/blob/8ad9fb6b4fa3eee8e8f79ddb305c6b3f8f4ad2c3/_index.scss</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrew Luca <a href="https://github.com/iamandrewluca">https://github.com/iamandrewluca</a></p></li></ul></section><section class="main__item container item" id="undefined-function-index-of-slice"><h3 class="item__heading"><a class="item__name" href="#function-index-of-slice">index-of-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function index-of-slice($slice, $slices: globally defined $slices) { 
+  $slices-sorted: map-sort-values($slices);
+  $keys: map.keys($slices-sorted);
+  $index: list.index($keys, $slice);
+
+  @return $index;
+ }" data-collapsed="@function index-of-slice($slice, $slices: globally defined $slices) { ... }"><code>@function index-of-slice($slice, $slices: globally defined $slices) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Returns the index of given slice.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>a slice to look up</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number</code> &mdash;<p>index of the slice (1-indexed)</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>index-of-slice(xl) // =&gt; 6
+index-of-slice(large, $slices: (small: 0, large: 600)) // =&gt; 2</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-map-sort-values"><code>map-sort-values</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-first-slice"><code>is-first-slice</code></a></li><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-last-slice"><code>is-last-slice</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-is-first-slice"><h3 class="item__heading"><a class="item__name" href="#function-is-first-slice">is-first-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function is-first-slice($slice, $slices: globally defined $slices) { 
+  $index: index-of-slice($slice, $slices);
+
+  @return $index == 1;
+ }" data-collapsed="@function is-first-slice($slice, $slices: globally defined $slices) { ... }"><code>@function is-first-slice($slice, $slices: globally defined $slices) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Checks whether given slice is the first one in the map.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>a slice to look up</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Bool</code> &mdash;<p>whether the slice is the first</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>is-first-slice(xxs) // =&gt; true
+is-first-slice(s) // =&gt; false
+is-first-slice(small, $slices: (small: 0, large: 600)) // =&gt; true</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-index-of-slice"><code>index-of-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-start-bp-of-slice"><code>start-bp-of-slice</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-is-last-slice"><h3 class="item__heading"><a class="item__name" href="#function-is-last-slice">is-last-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function is-last-slice($slice, $slices: globally defined $slices) { 
+  $index: index-of-slice($slice, $slices);
+  $length: list.length(map.keys($slices));
+
+  @return $index == $length;
+ }" data-collapsed="@function is-last-slice($slice, $slices: globally defined $slices) { ... }"><code>@function is-last-slice($slice, $slices: globally defined $slices) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Checks whether given slice is the last one in the map.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>a slice to look up</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Bool</code> &mdash;<p>whether the slice is the last</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>is-last-slice(xxl) // =&gt; false
+is-last-slice(xxxl) // =&gt; true
+is-last-slice(small, $slices: (small: 0, large: 600)) // =&gt; false</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-index-of-slice"><code>index-of-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-end-bp-of-slice"><code>end-bp-of-slice</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-next-slice"><h3 class="item__heading"><a class="item__name" href="#function-next-slice">next-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function next-slice($slice, $slices: globally defined $slices) { 
+  $slices-sorted: map-sort-values($slices);
+  $keys: map.keys($slices-sorted);
+  $index: list.index($keys, $slice);
+
+  @if $index == null {
+    @error &quot;Slice not found&quot;, $slice;
+  }
+
+  @if ($index &gt;= list.length($keys)) {
+    @return null;
+  }
+
+  @return list.nth($keys, $index + 1);
+ }" data-collapsed="@function next-slice($slice, $slices: globally defined $slices) { ... }"><code>@function next-slice($slice, $slices: globally defined $slices) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Returns the name of the next slice</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>a slice to look up</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String&lt;/code&gt; or &lt;code&gt;Null</code> &mdash;<p>the name of the next slice, or null if given slice was the last</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>next-slice(s) // =&gt; m
+next-slice(xxxl) // =&gt; null
+next-slice(small, $slices: (small: 0, large: 600)) // =&gt; large</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>Slice not found</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-map-sort-values"><code>map-sort-values</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-end-bp-of-slice"><code>end-bp-of-slice</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-start-bp-of-slice"><h3 class="item__heading"><a class="item__name" href="#function-start-bp-of-slice">start-bp-of-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function start-bp-of-slice($slice, $slices: globally defined $slices) { 
+  @if is-first-slice($slice, $slices) {
+    @return null;
+  }
+
+  $bp: map.get($slices, $slice);
+
+  @return $bp;
+ }" data-collapsed="@function start-bp-of-slice($slice, $slices: globally defined $slices) { ... }"><code>@function start-bp-of-slice($slice, $slices: globally defined $slices) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Returns the starting (normally left) breakpoint of given slice</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>a slice to look up</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number&lt;/code&gt; or &lt;code&gt;Null</code> &mdash;<p>the breakpoint, or null if the slice is the first one</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>start-bp-of-slice(xxs) // =&gt; null
+start-bp-of-slice(xs) // =&gt; 200
+start-bp-of-slice(small, $slices: (small: 0, large: 600)) // =&gt; null
+start-bp-of-slice(large, $slices: (small: 0, large: 600)) // =&gt; 600</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-first-slice"><code>is-first-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slice"><code>query-for-slice</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-end-bp-of-slice"><h3 class="item__heading"><a class="item__name" href="#function-end-bp-of-slice">end-bp-of-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function end-bp-of-slice($slice, $slices: globally defined $slices) { 
+  @if is-last-slice($slice, $slices) {
+    @return null;
+  }
+
+  $next-slice: next-slice($slice, $slices);
+
+  $bp: map.get($slices, $next-slice);
+
+  @return $bp - 1;
+ }" data-collapsed="@function end-bp-of-slice($slice, $slices: globally defined $slices) { ... }"><code>@function end-bp-of-slice($slice, $slices: globally defined $slices) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Returns the ending (normally right) breakpoint of given slice, which is the left breakpoint of the next slice minus 1px, or null if the slice is the last one.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>a slice to look up</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>Number&lt;/code&gt; or &lt;code&gt;Null</code> &mdash;<p>the breakpoint, or null if the slice is the first one</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>end-bp-of-slice(l) // =&gt; 999
+end-bp-of-slice(xxxl) // =&gt; null
+end-bp-of-slice(small, $slices: (small: 0, large: 600)) // =&gt; 599
+start-bp-of-slice(large, $slices: (small: 0, large: 600)) // =&gt; null</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-is-last-slice"><code>is-last-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-next-slice"><code>next-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slice"><code>query-for-slice</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-query-for-slice"><h3 class="item__heading"><a class="item__name" href="#function-query-for-slice">query-for-slice</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function query-for-slice($slice-start, $slice-end, $slices: globally defined $slices, $media: globally defined $media) { 
+  $result: null;
+
+  @if ($slice-end == &quot;__undefined__&quot;) {
+    $slice-end: $slice-start;
+  }
+
+  $start: $slice-start and start-bp-of-slice($slice-start, $slices);
+  $end: $slice-end and end-bp-of-slice($slice-end, $slices);
+
+  @if $start == null and $end == null {
+    @error &quot;This query spans the whole range of viewports and is redundant.&quot;;
+  }
+
+  @else if $start != null and $end != null {
+    @if ($start &gt;= $end) {
+      @error &quot;Expected left breakpoint of slice #{$slice-start} (#{$start}) to be smaller than right breakpoint of slice #{$slice-end} (#{$end}). Try reversing the order of slices.&quot;;
+    }
+
+    $result: &quot;(min-width: #{$start}px) and (max-width: #{$end}px)&quot;;
+  }
+
+  @else if $start == null {
+    $result: &quot;(max-width: #{$end}px)&quot;;
+  }
+
+  @else if $end == null {
+    $result: &quot;(min-width: #{$start}px)&quot;;
+  }
+
+  @else {
+    @error &quot;Neither left nor right breakpoint found for slices: #{$slice-start} #{$slice-end}&quot;;
+  }
+
+  @if ($media) {
+    $result: &quot;#{$media} and #{$result}&quot;;
+  }
+
+  @return $result;
+ }" data-collapsed="@function query-for-slice($slice-start, $slice-end, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@function query-for-slice($slice-start, $slice-end, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Generates a media query for a given slice or a range of two slices</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice-start</code></th><td data-label="desc"><p>a slice whose left breakpoint will be used</p></td><td data-label="type"><code>String</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice-end</code></th><td data-label="desc"><p>a slice whose right breakpoint will be used</p></td><td data-label="type"><code>String</code> or <code>Null</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code> &mdash;<p>resulting media query</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>query-for-slice(l) // =&gt; (min-width: 800px) and (max-width: 999px)
+query-for-slice(null, l) // =&gt; (max-width: 999px)
+query-for-slice(l, null) // =&gt; (min-width: 800px)
+query-for-slice(xxxl) // =&gt; (min-width: 1400px)
+query-for-slice(xxxl, null) // =&gt; (min-width: 1400px)
+query-for-slice(xxs) // =&gt; (max-width: 199px)
+query-for-slice(null, xxs) // =&gt; (max-width: 199px)
+query-for-slice(s l) // =&gt; (min-width: 400px) and (max-width: 999px)
+query-for-slice(small, $slices: (small: 0, large: 600)) // =&gt; (max-width: 999px)
+query-for-slice(l, $media: screen) // =&gt; screen and (min-width: 800px) and (max-width: 999px)</code></pre></div><h3 class="item__sub-heading">Throws</h3><ul class="list-unstyled"><li><p>This query spans the whole range of viewports and is redundant.</p></li><li><p>Expected left breakpoint of slice #{$slice-start} (#{$start}) to be smaller than right breakpoint of slice #{$slice-end} (#{$end}). Try reversing the order of slices.</p></li><li><p>Neither left nor right breakpoint found for slices: #{$slice-start} #{$slice-end}</p></li></ul><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-start-bp-of-slice"><code>start-bp-of-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-end-bp-of-slice"><code>end-bp-of-slice</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-function-query-for-slices"><h3 class="item__heading"><a class="item__name" href="#function-query-for-slices">query-for-slices</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function query-for-slices($query, $slices: globally defined $slices, $media: globally defined $media) { 
+  @if $media and list.separator($media) == &quot;comma&quot; and list.length($media) &gt; 1 {
+    $result: &quot;&quot;;
+
+    @each $medium in $media {
+      @if string.length($result) &gt; 0 {
+        $result: &quot;#{$result}, &quot;;
+      }
+
+      $result-item: _query-for-slices($query, $slices: $slices, $media: $medium);
+      $result: &quot;#{$result}#{$result-item}&quot;;
+    }
+
+    @return $result;
+  }
+
+  @else {
+    @return _query-for-slices($query, $slices: $slices, $media: $media);
+  }
+ }" data-collapsed="@function query-for-slices($query, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@function query-for-slices($query, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Generates a media query for a given comma-separated list of slices and ranges of two slices</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$query</code></th><td data-label="desc"><p>a comma-separated list of slices and ranges of two slices</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Returns</h3><div class="item__description item__description--inline"><code>String</code> &mdash;<p>resulting media query</p></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-sass"><code>query-for-slices(l) // =&gt; (min-width: 800px) and (max-width: 999px)
+query-for-slices((null l)) // =&gt; (max-width: 999px)
+query-for-slices((null l), xxxl) // =&gt; (max-width: 999px), (min-width: 1400px)
+query-for-slices((s l), xxxl) // =&gt; (min-width: 400px) and (max-width: 999px), (min-width: 1400px)
+query-for-slices(small, $slices: (small: 0, large: 600)) // =&gt; (max-width: 999px)
+query-for-slices(l, $media: screen) // =&gt; screen and (min-width: 800px) and (max-width: 999px)</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-at"><code>at</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-from"><code>from</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-to"><code>to</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-between"><code>between</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-query"><code>query</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-at"><h3 class="item__heading"><a class="item__name" href="#mixin-at">at</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin at($slice, $slices: globally defined $slices, $media: globally defined $media) { 
+  $media: query-for-slices($slice, $slices: $slices, $media: $media);
+
+  @media #{$media} {
+    @content;
+  }
+ }" data-collapsed="@mixin at($slice, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@mixin at($slice, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Wraps CSS code with a media query confined by a given slice</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>name of slice</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include at(s) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include at(medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media screen and (min-width: 300px) and (max-width: 599px), print and (min-width: 300px) and (max-width: 599px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>CSS wrapped in a media query</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-from"><h3 class="item__heading"><a class="item__name" href="#mixin-from">from</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin from($slice, $slices: globally defined $slices, $media: globally defined $media) { 
+  $media: query-for-slices(($slice null), $slices: $slices, $media: $media);
+
+  @media #{$media} {
+    @content;
+  }
+ }" data-collapsed="@mixin from($slice, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@mixin from($slice, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Wraps CSS code with a media query confined by a given slice and larger</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>name of slice</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include from(s) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media (min-width: 400px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include from(medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media screen and (min-width: 300px), print and (min-width: 300px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>CSS wrapped in a media query</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-to"><h3 class="item__heading"><a class="item__name" href="#mixin-to">to</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin to($slice, $slices: globally defined $slices, $media: globally defined $media) { 
+  $media: query-for-slices((null $slice), $slices: $slices, $media: $media);
+
+  @media #{$media} {
+    @content;
+  }
+ }" data-collapsed="@mixin to($slice, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@mixin to($slice, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Wraps CSS code with a media query confined by a given slice and smaller</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice</code></th><td data-label="desc"><p>name of slice</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include to(s) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media (max-width: 599px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include to(medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media screen and (max-width: 599px), print and (max-width: 599px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>CSS wrapped in a media query</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-between"><h3 class="item__heading"><a class="item__name" href="#mixin-between">between</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin between($slice-start, $slice-end, $slices: globally defined $slices, $media: globally defined $media) { 
+  $media: query-for-slices(($slice-start $slice-end), $slices: $slices, $media: $media);
+
+  @media #{$media} {
+    @content;
+  }
+ }" data-collapsed="@mixin between($slice-start, $slice-end, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@mixin between($slice-start, $slice-end, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Wraps CSS code with a media query confined within two slices</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice-start</code></th><td data-label="desc"><p>name of starting slice</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slice-end</code></th><td data-label="desc"><p>name of ending slice, inclusive</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include between(s, l) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media (min-width: 400px) and (max-width: 999px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include between(small, medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media screen and (max-width: 599px), print and (max-width: 599px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>CSS wrapped in a media query</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section><section class="main__item container item" id="undefined-mixin-query"><h3 class="item__heading"><a class="item__name" href="#mixin-query">query</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin query($query, $slices: globally defined $slices, $media: globally defined $media) { 
+  $media: query-for-slices($query, $slices: $slices, $media: $media);
+
+  @media #{$media} {
+    @content;
+  }
+ }" data-collapsed="@mixin query($query, $slices: globally defined $slices, $media: globally defined $media) { ... }"><code>@mixin query($query, $slices: globally defined $slices, $media: globally defined $media) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Wraps CSS code with a compound media query, using flexible syntax</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter </span>Name</th><th scope="col"><span class="visually-hidden">parameter </span>Description</th><th scope="col"><span class="visually-hidden">parameter </span>Type</th><th scope="col"><span class="visually-hidden">parameter </span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$query</code></th><td data-label="desc"><p>a comma-separated list of slices and ranges of two slices</p></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden"> none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$slices</code></th><td data-label="desc"><p>a map of slices to work with</p></td><td data-label="type"><code>Map</code></td><td data-label="default"><code>globally defined $slices</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$media</code></th><td data-label="desc"><p>a media query to prend the result with</p></td><td data-label="type"><code>Map</code> or <code>Null</code></td><td data-label="default"><code>globally defined $media</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include query((s l), xxxl) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media (min-width: 400px) and (max-width: 999px), (min-width: 1400px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><div class="item__example example"><pre class="example__code language-scss"><code>.foo {
+  @include query(small, $slices: (small: 0, large: 600), $media: (screen, print)) {
+    color: red;
+  }
+}
+
+// produces:
+
+@media screen and (max-width: 599px), print and (max-width: 599px) {
+  .foo {
+    color: red;
+  }
+}</code></pre></div><h3 class="item__sub-heading">Output</h3><div class="item__description"><p>CSS wrapped in a media query</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[function]</span> <a href="#undefined-function-query-for-slices"><code>query-for-slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-slices"><code>slices</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-media"><code>media</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Andrey Mikhaylov (lolmaus) <a href="https://github.com/lolmaus">https://github.com/lolmaus</a></p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --> <span class="project-info__name">Breakpoint-slicer</span><!-- Version --> <span class="project-info__version">- v3.0.0-alpha.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
