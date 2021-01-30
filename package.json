@@ -1,10 +1,20 @@
 {
   "name": "breakpoint-slicer",
+  "title": "Breakpoint Slicer",
   "version": "3.0.0-alpha.0",
   "description": "Slice media queries with ease",
   "main": "test.js",
-  "repository": "git+https://github.com/lolmaus/breakpoint-slicer.git",
   "author": "Andrey Mikhaylov (lolmaus) <lolmaus@gmail.com>",
+  "contributors": [
+    "Github contributors <https://github.com/lolmaus/breakpoint-slicer/graphs/contributors>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolmaus/breakpoint-slicer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lolmaus/breakpoint-slicer/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "jest": "^26.6.3",
@@ -15,7 +25,7 @@
   "scripts": {
     "test": "jest",
     "dev": "jest --watch",
-    "sassdoc": "sassdoc *.s?ss"
+    "sassdoc": "sassdoc *.s?ss -c .sassdoc.yml"
   },
   "jest": {
     "testEnvironment": "node",
@@ -29,5 +39,28 @@
       "scss",
       "sass"
     ]
-  }
+  },
+  "eyeglass": {
+    "needs": "*",
+    "sassDir": ".",
+    "exports": false
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "media query",
+    "media queries",
+    "media",
+    "respond to",
+    "respond-to",
+    "breakpoint",
+    "breakpoints",
+    "eyeglass-module"
+  ],
+  "files": [
+    "index.scss",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md"
+  ]
 }

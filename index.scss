@@ -8,6 +8,7 @@
 
 /// The default slices map.
 /// @type Map
+/// @access public
 $slices: (
   xxs:     0,
   xs:    200,
@@ -26,6 +27,7 @@ $slices: (
 /// * a single media query, e. g. `monochrome and (orientation: portrait)`
 /// * a comma-separated list of media queries, e. g. `screen, print`
 /// @type null | list
+/// @access public
 /// @example scss
 ///  $media: null;
 ///
@@ -140,7 +142,7 @@ $media: null;
 
 
 /// Sorts a Sass map by its values. Values must be numeric.
-/// @access public
+/// @access private
 /// @arg {Map} $map - a map to sort
 /// @return {Map} sorted map
 /// @example sass
@@ -196,7 +198,7 @@ $media: null;
 
 
 /// Returns the index of given slice.
-/// @access public
+/// @access private
 /// @arg {String} $slice - a slice to look up
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {Number} index of the slice (1-indexed)
@@ -214,7 +216,7 @@ $media: null;
 
 
 /// Checks whether given slice is the first one in the map.
-/// @access public
+/// @access private
 /// @arg {String} $slice - a slice to look up
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {Bool} whether the slice is the first
@@ -231,7 +233,7 @@ $media: null;
 
 
 /// Checks whether given slice is the last one in the map.
-/// @access public
+/// @access private
 /// @arg {String} $slice - a slice to look up
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {Bool} whether the slice is the last
@@ -249,7 +251,7 @@ $media: null;
 
 
 /// Returns the name of the next slice
-/// @access public
+/// @access private
 /// @arg {String} $slice - a slice to look up
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {string | null} the name of the next slice, or null if given slice was the last
@@ -276,7 +278,7 @@ $media: null;
 
 
 /// Returns the starting (normally left) breakpoint of given slice
-/// @access public
+/// @access private
 /// @arg {String} $slice - a slice to look up
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {number | null} the breakpoint, or null if the slice is the first one
@@ -300,7 +302,7 @@ $media: null;
 /// Returns the ending (normally right) breakpoint of given slice,
 /// which is the left breakpoint of the next slice minus 1px,
 /// or null if the slice is the last one.
-/// @access public
+/// @access private
 /// @arg {String} $slice - a slice to look up
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {number | null} the breakpoint, or null if the slice is the first one
@@ -324,7 +326,7 @@ $media: null;
 
 
 /// Generates a media query for a given slice or a range of two slices
-/// @access public
+/// @access private
 /// @arg {String | Null} $slice-start - a slice whose left breakpoint will be used
 /// @arg {String | Null} $slice-end - a slice whose right breakpoint will be used
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
@@ -414,8 +416,43 @@ $media: null;
 
 
 
+/// Generates a media query for a given comma-separated list of slices and ranges of two slices
+/// @access private
+/// @arg {Map} $query - a comma-separated list of slices and ranges of two slices
+/// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
+/// @arg {Map | null} $media [globally defined $media] - a media query to prend the result with
+/// @return {string} resulting media query
+/// @example sass
+///   query-for-slices(l) // => (min-width: 800px) and (max-width: 999px)
+///   query-for-slices((null l)) // => (max-width: 999px)
+///   query-for-slices((null l), xxxl) // => (max-width: 999px), (min-width: 1400px)
+///   query-for-slices((s l), xxxl) // => (min-width: 400px) and (max-width: 999px), (min-width: 1400px)
+///   query-for-slices(small, $slices: (small: 0, large: 600)) // => (max-width: 999px)
+///   query-for-slices(l, $media: screen) // => screen and (min-width: 800px) and (max-width: 999px)
+@function query-for-slices($query, $slices: $slices, $media: $media) {
+  @if $media and list.separator($media) == "comma" and list.length($media) > 1 {
+    $result: "";
+
+    @each $medium in $media {
+      @if string.length($result) > 0 {
+        $result: "#{$result}, ";
+      }
+
+      $result-item: _query-for-slices($query, $slices: $slices, $media: $medium);
+      $result: "#{$result}#{$result-item}";
+    }
+
+    @return $result;
+  }
+
+  @else {
+    @return _query-for-slices($query, $slices: $slices, $media: $media);
+  }
+}
+
+
 /// Wraps CSS code with a media query confined by a given slice
-/// @access public
+/// @access private
 /// @arg {String} $slice - name of slice
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @arg {Map | null} $media [globally defined $media] - a media query to prend the result with
@@ -456,43 +493,6 @@ $media: null;
     @content;
   }
 }
-
-
-
-/// Generates a media query for a given comma-separated list of slices and ranges of two slices
-/// @access public
-/// @arg {Map} $query - a comma-separated list of slices and ranges of two slices
-/// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
-/// @arg {Map | null} $media [globally defined $media] - a media query to prend the result with
-/// @return {string} resulting media query
-/// @example sass
-///   query-for-slices(l) // => (min-width: 800px) and (max-width: 999px)
-///   query-for-slices((null l)) // => (max-width: 999px)
-///   query-for-slices((null l), xxxl) // => (max-width: 999px), (min-width: 1400px)
-///   query-for-slices((s l), xxxl) // => (min-width: 400px) and (max-width: 999px), (min-width: 1400px)
-///   query-for-slices(small, $slices: (small: 0, large: 600)) // => (max-width: 999px)
-///   query-for-slices(l, $media: screen) // => screen and (min-width: 800px) and (max-width: 999px)
-@function query-for-slices($query, $slices: $slices, $media: $media) {
-  @if $media and list.separator($media) == "comma" and list.length($media) > 1 {
-    $result: "";
-
-    @each $medium in $media {
-      @if string.length($result) > 0 {
-        $result: "#{$result}, ";
-      }
-
-      $result-item: _query-for-slices($query, $slices: $slices, $media: $medium);
-      $result: "#{$result}#{$result-item}";
-    }
-
-    @return $result;
-  }
-
-  @else {
-    @return _query-for-slices($query, $slices: $slices, $media: $media);
-  }
-}
-
 
 
 /// Wraps CSS code with a media query confined by a given slice and larger
@@ -539,7 +539,6 @@ $media: null;
 }
 
 
-
 /// Wraps CSS code with a media query confined by a given slice and smaller
 /// @access public
 /// @arg {String} $slice - name of slice
@@ -582,7 +581,6 @@ $media: null;
     @content;
   }
 }
-
 
 
 /// Wraps CSS code with a media query confined within two slices
@@ -628,7 +626,6 @@ $media: null;
     @content;
   }
 }
-
 
 
 /// Wraps CSS code with a compound media query, using flexible syntax
