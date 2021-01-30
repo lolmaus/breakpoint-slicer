@@ -5,3 +5,10 @@ sort:
 descriptionPath: README.md
 groups:
   undefined: API docs
+basePath: https://github.com/lolmaus/breakpoint-slicer/tree/gen-3
+package:
+  name: breakpoint-slicer
+  title: Breakpoint Slicer
+  description: Slice media queries with ease
+  homepage: https://github.com/lolmaus/breakpoint-slicer
+  license: MIT

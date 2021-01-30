@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/lolmaus/breakpoint-slicer/issues"
   },
+  "homepage": "https://lolmaus.github.io/breakpoint-slicer",
   "license": "MIT",
   "devDependencies": {
     "jest": "^26.6.3",
