@@ -254,7 +254,7 @@ $slices: (
 // my-module.scss
 
 @use "config";
-@use "node_modules/breakpoint-slicer" with ($slices: config.$slices) as bs;
+@use "node_modules/breakpoint-slicer" as bs with ($slices: config.$slices);
 
 .foo {
   @include bp.at(small) {
