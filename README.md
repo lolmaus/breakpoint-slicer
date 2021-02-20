@@ -8,10 +8,10 @@ Breakpoint Slicer ![npm](https://img.shields.io/npm/v/breakpoint-slicer) ![GitHu
 Breakpoint Slicer is a set of Sass mixins that makes working with mediaqueries effortless and fun.
 
 ```scss
-@include at(s)          // => @media (min-width: 400px) and (max-witdth: 599px)
+@include at(s)          // => @media (min-width: 400px) and (max-width: 599px)
 @include from(s)        // => @media (min-width: 400px)
-@include to(s)          // => @media                        (max-witdth: 599px)
-@include between(xs, l) // => @media (min-width: 200px) and (max-witdth: 799px)
+@include to(s)          // => @media                        (max-width: 599px)
+@include between(xs, l) // => @media (min-width: 200px) and (max-width: 799px)
 ```
 
 See below how to customize breakpoints!
