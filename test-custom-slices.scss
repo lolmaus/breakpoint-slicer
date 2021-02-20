@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "index" as bp with ($slices: (alpha: 0, beta: 1234, omega: 5678));
+@use "node_modules/sass-true/sass/true" as *;
+
+
+@include test-module('Custom') {
+  @include test-module('custom global slices used') {
+    $case: custom-slices;
+
+    @include test($case) {
+      @include assert {
+        @include output {
+          @include bp.at(alpha) {
+            color: red;
+          }
+          @include bp.at(beta) {
+            color: red;
+          }
+          @include bp.at(omega) {
+            color: red;
+          }
+        }
+
+        @include expect {
+          @media (max-width: 1233px) {
+            color: red;
+          }
+          @media (min-width: 1234px) and (max-width: 5677px) {
+            color: red;
+          }
+          @media (min-width: 5678px) {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
