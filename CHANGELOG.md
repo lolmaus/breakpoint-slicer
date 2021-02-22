@@ -2,7 +2,16 @@ Breakpoint Slicer changelog
 ===========================
 
 
-3.0.0-alpha.0 (20201.01.30)
+
+3.0.0-beta.0 (2021.02.22)
+-------------------------
+
+### Fixed
+- Flag $slices and $media with !default to allow overrides, fixes #27 (@jaradlight)
+- Readme fixes (@jaradlight)
+
+
+3.0.0-alpha.0 (2021.01.30)
 ---------------------------
 
 Complete rewrite!
