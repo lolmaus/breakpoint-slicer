@@ -1,4 +1,4 @@
-name: Build SassDoc documentation and deploy to Github Pages
+name: Test
 
 on:
   - push
@@ -25,4 +25,4 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Test
-        run: yarn Test
+        run: yarn test
