@@ -1,9 +1,8 @@
 name: Build SassDoc documentation and deploy to Github Pages
 
 on:
-  push:
-    branches:
-      - gen-3
+  - push
+  - pull_request
 
 env:
   NODE_VERSION: 14
@@ -25,11 +24,5 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build SassDoc
-        run: yarn sassdoc
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./sassdoc
+      - name: Test
+        run: yarn Test
