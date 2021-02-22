@@ -1,0 +1,26 @@
+@use "sass:map";
+@use "index" as bp with ($media: (screen, print));
+@use "node_modules/sass-true/sass/true" as *;
+
+
+@include test-module('Custom') {
+  @include test-module('custom global media used') {
+    $case: custom-media;
+
+    @include test($case) {
+      @include assert {
+        @include output {
+          @include bp.to(m) {
+            color: red;
+          }
+        }
+
+        @include expect {
+          @media screen and (max-width: 799px), print and (max-width: 799px) {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
