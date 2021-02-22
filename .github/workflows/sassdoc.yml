@@ -1,9 +1,8 @@
 name: Build SassDoc documentation and deploy to Github Pages
 
 on:
-  push:
-    branches:
-      - gen-3
+  - push
+  - pull_request
 
 env:
   NODE_VERSION: 14
