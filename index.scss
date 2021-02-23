@@ -98,13 +98,13 @@ $media: null !default;
 
 
 // // @function list-swap($list, $index-a, $index-b) {
-// //   @if abs($index-a) > length($list) or
-// //                abs($index-b) > length($list) {
+// //   @if math.abs($index-a) > list.length($list) or
+// //                math.abs($index-b) > list.length($list) {
 // //     @return $list;
 // //   }
-// //   $temp: nth($list, $index-a);
-// //   $list: set-nth($list, $index-a, nth($list, $index-b));
-// //   $list: set-nth($list, $index-b, $temp);
+// //   $temp: list.nth($list, $index-a);
+// //   $list: list.set-nth($list, $index-a, list.nth($list, $index-b));
+// //   $list: list.set-nth($list, $index-b, $temp);
 // //   @return $list;
 // // }
 
@@ -117,7 +117,7 @@ $media: null !default;
 //   @while list.length($list) > 0 {
 //       $value: list.nth($list, 1);
 //       @each $item in $list {
-//         @if type-of($item) == "number" and type-of($value) == "number" {
+//         @if meta.type-of($item) == "number" and meta.type-of($value) == "number" {
 //           @if $item < $value {
 //               $value: $item;
 //           }
@@ -138,7 +138,7 @@ $media: null !default;
 //   $keys: list-sort-numeric(map.keys($map));
 //   $sorted-map: ();
 //   @each $key in $keys {
-//     $sorted-map: map.merge($sorted-map, ($key: map-get($map, $key)));
+//     $sorted-map: map.merge($sorted-map, ($key: map.get($map, $key)));
 //   }
 //   @return $sorted-map;
 // }
@@ -159,37 +159,37 @@ $media: null !default;
   $values: ();
 
   @each $key, $val in $map {
-    $keys: append($keys, $key);
-    $values: append($values, $val);
+    $keys: list.append($keys, $key);
+    $values: list.append($values, $val);
   }
 
-  $list: zip($keys, $values);
+  $list: list.zip($keys, $values);
 
   // Sort zipped list and create sorted map
   $sortedMap: ();
-  @while length($list) > 0 {
+  @while list.length($list) > 0 {
 
     // Find smallest pair
-    $smallestPair: nth($list, 1);
+    $smallestPair: list.nth($list, 1);
     @each $pair in $list {
-      $value: nth($pair, 2);
-      $smallestValue: nth($smallestPair, 2);
+      $value: list.nth($pair, 2);
+      $smallestValue: list.nth($smallestPair, 2);
       @if $value < $smallestValue {
         $smallestPair: $pair;
       }
     }
 
     // Add smallest pair to sorted map
-    $key: nth($smallestPair, 1);
-    $value: nth($smallestPair, 2);
-    $sortedMap: map-merge($sortedMap, ($key: $value));
+    $key: list.nth($smallestPair, 1);
+    $value: list.nth($smallestPair, 2);
+    $sortedMap: map.merge($sortedMap, ($key: $value));
 
     // Remove from list smallest pair
     $newList: ();
-    $smallestPairIndex: index($list, $smallestPair);
-    @for $i from 1 through length($list) {
+    $smallestPairIndex: list.index($list, $smallestPair);
+    @for $i from 1 through list.length($list) {
       @if $i != $smallestPairIndex {
-        $newList: append($newList, nth($list, $i), "space");
+        $newList: list.append($newList, list.nth($list, $i), "space");
       }
     }
     $list: $newList;
