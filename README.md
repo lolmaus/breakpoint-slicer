@@ -210,15 +210,15 @@ Slices are defined as a map like this:
 
 ```scss
 $slices: (
-  small: 0,
-  medium: 400,
-  large: 800,
+  small: 0px,
+  medium: 400px,
+  large: 800px,
 );
 ```
 
 Keys are slice names and values are left breakpoints of each slice.
 
-⚠ One slice *must* have a left breakpoint of `0`.
+⚠ One slice *must* have a left breakpoint of `0px`.
 
 It is recommended that you list slices in the incremental order.
 
@@ -244,9 +244,9 @@ This is how you can override default slices at the top of your Sass module:
 // config.scss
 
 $slices: (
-  small: 0,
-  medium: 400,
-  large: 800
+  small: 0px,
+  medium: 400px,
+  large: 800px,
 );
 ```
 
@@ -274,9 +274,9 @@ Define `$slices` globally next to your  `breakpoint-slicer` invocation:
 @import 'breakpoint-slicer';
 
 $slices: (
-  small: 0,
-  medium: 400,
-  large: 800
+  small: 0px,
+  medium: 400px,
+  large: 800px,
 );
 ```
 ```

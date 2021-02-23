@@ -5,20 +5,22 @@
 
 @use "sass:list";
 @use "sass:map";
+@use "sass:math";
+@use "sass:meta";
 @use "sass:string";
 
 /// The default slices map.
 /// @type Map
 /// @access public
 $slices: (
-  xxs:     0,
-  xs:    200,
-  s:     400,
-  m:     600,
-  l:     800,
-  xl:   1000,
-  xxl:  1200,
-  xxxl: 1400,
+  xxs:     0px,
+  xs:    200px,
+  s:     400px,
+  m:     600px,
+  l:     800px,
+  xl:   1000px,
+  xxl:  1200px,
+  xxxl: 1400px,
 ) !default;
 
 
@@ -198,6 +200,21 @@ $media: null !default;
 
 
 
+/// Checks whether given value is a number with px unit.
+/// @access private
+/// @arg {Any} $value - a value to check
+/// @return {Bool} whether the value is a number with px unit
+/// @example sass
+///   is-number-px(100px) // => true
+///   is-number-px(100em) // => false
+///   is-number-px(100) // => false
+///   is-number-px('text') // => false
+@function is-number-px($value) {
+  @return meta.type-of($value) == 'number' and math.unit($value) == 'px';
+}
+
+
+
 /// Returns the index of given slice.
 /// @access private
 /// @arg {String} $slice - a slice to look up
@@ -205,7 +222,7 @@ $media: null !default;
 /// @return {Number} index of the slice (1-indexed)
 /// @example sass
 ///  index-of-slice(xl) // => 6
-///  index-of-slice(large, $slices: (small: 0, large: 600)) // => 2
+///  index-of-slice(large, $slices: (small: 0px, large: 600px)) // => 2
 @function index-of-slice($slice, $slices: $slices) {
   $slices-sorted: map-sort-values($slices);
   $keys: map.keys($slices-sorted);
@@ -224,7 +241,7 @@ $media: null !default;
 /// @example sass
 ///   is-first-slice(xxs) // => true
 ///   is-first-slice(s) // => false
-///   is-first-slice(small, $slices: (small: 0, large: 600)) // => true
+///   is-first-slice(small, $slices: (small: 0px, large: 600px)) // => true
 @function is-first-slice($slice, $slices: $slices) {
   $index: index-of-slice($slice, $slices);
 
@@ -241,7 +258,7 @@ $media: null !default;
 /// @example sass
 ///   is-last-slice(xxl) // => false
 ///   is-last-slice(xxxl) // => true
-///   is-last-slice(small, $slices: (small: 0, large: 600)) // => false
+///   is-last-slice(small, $slices: (small: 0px, large: 600px)) // => false
 @function is-last-slice($slice, $slices: $slices) {
   $index: index-of-slice($slice, $slices);
   $length: list.length(map.keys($slices));
@@ -259,7 +276,7 @@ $media: null !default;
 /// @example sass
 ///   next-slice(s) // => m
 ///   next-slice(xxxl) // => null
-///   next-slice(small, $slices: (small: 0, large: 600)) // => large
+///   next-slice(small, $slices: (small: 0px, large: 600px)) // => large
 @function next-slice($slice, $slices: $slices) {
   $slices-sorted: map-sort-values($slices);
   $keys: map.keys($slices-sorted);
@@ -285,9 +302,9 @@ $media: null !default;
 /// @return {number | null} the breakpoint, or null if the slice is the first one
 /// @example sass
 ///   start-bp-of-slice(xxs) // => null
-///   start-bp-of-slice(xs) // => 200
-///   start-bp-of-slice(small, $slices: (small: 0, large: 600)) // => null
-///   start-bp-of-slice(large, $slices: (small: 0, large: 600)) // => 600
+///   start-bp-of-slice(xs) // => 200px
+///   start-bp-of-slice(small, $slices: (small: 0px, large: 600px)) // => null
+///   start-bp-of-slice(large, $slices: (small: 0px, large: 600px)) // => 600px
 @function start-bp-of-slice($slice, $slices: $slices) {
   @if is-first-slice($slice, $slices) {
     @return null;
@@ -308,10 +325,10 @@ $media: null !default;
 /// @arg {Map} $slices [globally defined $slices] - a map of slices to work with
 /// @return {number | null} the breakpoint, or null if the slice is the first one
 /// @example sass
-///   end-bp-of-slice(l) // => 999
+///   end-bp-of-slice(l) // => 999px
 ///   end-bp-of-slice(xxxl) // => null
-///   end-bp-of-slice(small, $slices: (small: 0, large: 600)) // => 599
-///   start-bp-of-slice(large, $slices: (small: 0, large: 600)) // => null
+///   end-bp-of-slice(small, $slices: (small: 0px, large: 600px)) // => 599px
+///   start-bp-of-slice(large, $slices: (small: 0px, large: 600px)) // => null
 @function end-bp-of-slice($slice, $slices: $slices) {
   @if is-last-slice($slice, $slices) {
     @return null;
@@ -342,7 +359,7 @@ $media: null !default;
 ///   query-for-slice(xxs) // => (max-width: 199px)
 ///   query-for-slice(null, xxs) // => (max-width: 199px)
 ///   query-for-slice(s l) // => (min-width: 400px) and (max-width: 999px)
-///   query-for-slice(small, $slices: (small: 0, large: 600)) // => (max-width: 999px)
+///   query-for-slice(small, $slices: (small: 0px, large: 600px)) // => (max-width: 999px)
 ///   query-for-slice(l, $media: screen) // => screen and (min-width: 800px) and (max-width: 999px)
 @function query-for-slice($slice-start, $slice-end: "__undefined__", $slices: $slices, $media: $media) {
   $result: null;
@@ -358,20 +375,28 @@ $media: null !default;
     @error "This query spans the whole range of viewports and is redundant.";
   }
 
+  @else if $start != null and not is-number-px($start) {
+    @error "Expected left breakpoint of slice #{$slice-start} (#{$start}) to be a number with unit px.";
+  }
+
+  @else if $end != null and not is-number-px($end) {
+    @error "Expected right breakpoint of slice #{$slice-end} (#{$end}) to be a number with unit px.";
+  }
+
   @else if $start != null and $end != null {
     @if ($start >= $end) {
       @error "Expected left breakpoint of slice #{$slice-start} (#{$start}) to be smaller than right breakpoint of slice #{$slice-end} (#{$end}). Try reversing the order of slices.";
     }
 
-    $result: "(min-width: #{$start}px) and (max-width: #{$end}px)";
+    $result: "(min-width: #{$start}) and (max-width: #{$end})";
   }
 
   @else if $start == null {
-    $result: "(max-width: #{$end}px)";
+    $result: "(max-width: #{$end})";
   }
 
   @else if $end == null {
-    $result: "(min-width: #{$start}px)";
+    $result: "(min-width: #{$start})";
   }
 
   @else {
@@ -428,7 +453,7 @@ $media: null !default;
 ///   query-for-slices((null l)) // => (max-width: 999px)
 ///   query-for-slices((null l), xxxl) // => (max-width: 999px), (min-width: 1400px)
 ///   query-for-slices((s l), xxxl) // => (min-width: 400px) and (max-width: 999px), (min-width: 1400px)
-///   query-for-slices(small, $slices: (small: 0, large: 600)) // => (max-width: 999px)
+///   query-for-slices(small, $slices: (small: 0px, large: 600px)) // => (max-width: 999px)
 ///   query-for-slices(l, $media: screen) // => screen and (min-width: 800px) and (max-width: 999px)
 @function query-for-slices($query, $slices: $slices, $media: $media) {
   @if $media and list.separator($media) == "comma" and list.length($media) > 1 {
@@ -475,7 +500,7 @@ $media: null !default;
 ///   }
 /// @example scss
 ///   .foo {
-///     @include at(medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+///     @include at(medium, $slices: (small: 0px, medium: 300px, large: 600px), $media: (screen, print)) {
 ///       color: red;
 ///     }
 ///   }
@@ -519,7 +544,7 @@ $media: null !default;
 ///   }
 /// @example scss
 ///   .foo {
-///     @include from(medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+///     @include from(medium, $slices: (small: 0px, medium: 300px, large: 600px), $media: (screen, print)) {
 ///       color: red;
 ///     }
 ///   }
@@ -563,7 +588,7 @@ $media: null !default;
 ///   }
 /// @example scss
 ///   .foo {
-///     @include to(medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+///     @include to(medium, $slices: (small: 0px, medium: 300px, large: 600px), $media: (screen, print)) {
 ///       color: red;
 ///     }
 ///   }
@@ -608,7 +633,7 @@ $media: null !default;
 ///   }
 /// @example scss
 ///   .foo {
-///     @include between(small, medium, $slices: (small: 0, medium: 300, large: 600), $media: (screen, print)) {
+///     @include between(small, medium, $slices: (small: 0px, medium: 300px, large: 600px), $media: (screen, print)) {
 ///       color: red;
 ///     }
 ///   }
@@ -652,7 +677,7 @@ $media: null !default;
 ///   }
 /// @example scss
 ///   .foo {
-///     @include query(small, $slices: (small: 0, large: 600), $media: (screen, print)) {
+///     @include query(small, $slices: (small: 0px, large: 600px), $media: (screen, print)) {
 ///       color: red;
 ///     }
 ///   }

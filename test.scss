@@ -96,6 +96,24 @@
   }
 
 
+  @include test-module('is-number-px') {
+    @each $case in (
+      (given: 100px, expected: true),
+      (given: 100em, expected: false),
+      (given: 100, expected: false),
+      (given: "string", expected: false),
+    ) {
+      $given: map.get($case, "given");
+      $expected: map.get($case, "expected");
+
+      @include test($given) {
+        $result: bp.is-number-px($given);
+        @include assert-equal($result, $expected);
+      }
+    }
+  }
+
+
   @include test-module('index-of-slice') {
     @include test-module('default slices') {
       @each $case in (
@@ -128,7 +146,7 @@
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.index-of-slice($given, $slices: (s: 0, m: 350, l: 800));
+          $result: bp.index-of-slice($given, $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
@@ -168,7 +186,7 @@
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.is-first-slice($given, $slices: (s: 0, m: 350, l: 800));
+          $result: bp.is-first-slice($given, $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
@@ -208,7 +226,7 @@
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.is-last-slice($given, $slices: (s: 0, m: 350, l: 800));
+          $result: bp.is-last-slice($given, $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
@@ -248,7 +266,7 @@
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.next-slice($given, $slices: (s: 0, m: 350, l: 800));
+          $result: bp.next-slice($given, $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
@@ -260,13 +278,13 @@
     @include test-module('default slices') {
       @each $case in (
         (given: "xxs", expected: null),
-        (given: "xs", expected: 200),
-        (given: "s", expected: 400),
-        (given: "m", expected: 600),
-        (given: "l", expected: 800),
-        (given: "xl", expected: 1000),
-        (given: "xxl", expected: 1200),
-        (given: "xxxl", expected: 1400),
+        (given: "xs", expected: 200px),
+        (given: "s", expected: 400px),
+        (given: "m", expected: 600px),
+        (given: "l", expected: 800px),
+        (given: "xl", expected: 1000px),
+        (given: "xxl", expected: 1200px),
+        (given: "xxxl", expected: 1400px),
       ) {
         $given: map.get($case, "given");
         $expected: map.get($case, "expected");
@@ -280,15 +298,15 @@
 
     @include test-module('custom slices') {
       @each $case in (
-        (given: "m", expected: 350),
-        (given: "l", expected: 800),
+        (given: "m", expected: 350px),
+        (given: "l", expected: 800px),
         (given: "s", expected: null),
       ) {
         $given: map.get($case, "given");
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.start-bp-of-slice($given, $slices: (s: 0, m: 350, l: 800));
+          $result: bp.start-bp-of-slice($given, $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
@@ -299,13 +317,13 @@
   @include test-module('end-bp-of-slice') {
     @include test-module('default slices') {
       @each $case in (
-        (given: "xxs", expected: 199),
-        (given: "xs", expected: 399),
-        (given: "s", expected: 599),
-        (given: "m", expected: 799),
-        (given: "l", expected: 999),
-        (given: "xl", expected: 1199),
-        (given: "xxl", expected: 1399),
+        (given: "xxs", expected: 199px),
+        (given: "xs", expected: 399px),
+        (given: "s", expected: 599px),
+        (given: "m", expected: 799px),
+        (given: "l", expected: 999px),
+        (given: "xl", expected: 1199px),
+        (given: "xxl", expected: 1399px),
         (given: "xxxl", expected: null),
       ) {
         $given: map.get($case, "given");
@@ -320,15 +338,15 @@
 
     @include test-module('custom slices') {
       @each $case in (
-        (given: "m", expected: 799),
+        (given: "m", expected: 799px),
         (given: "l", expected: null),
-        (given: "s", expected: 349),
+        (given: "s", expected: 349px),
       ) {
         $given: map.get($case, "given");
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.end-bp-of-slice($given, $slices: (s: 0, m: 350, l: 800));
+          $result: bp.end-bp-of-slice($given, $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
@@ -388,14 +406,14 @@
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.query-for-slice($given..., $slices: (s: 0, m: 350, l: 800));
+          $result: bp.query-for-slice($given..., $slices: (s: 0px, m: 350px, l: 800px));
           @include assert-equal($result, $expected);
         }
       }
     }
 
     @include test('custom media') {
-      $result: bp.query-for-slice(null, s, $slices: (s: 0, m: 350, l: 800), $media: "monochrome");
+      $result: bp.query-for-slice(null, s, $slices: (s: 0px, m: 350px, l: 800px), $media: "monochrome");
       @include assert-equal($result, "monochrome and (max-width: 349px)");
     }
   }
@@ -449,7 +467,7 @@
         $expected: map.get($case, "expected");
 
         @include test($given) {
-          $result: bp.query-for-slices($given, $slices: (s: 0, m: 350, l: 800, xl: 1050));
+          $result: bp.query-for-slices($given, $slices: (s: 0, m: 350px, l: 800px, xl: 1050px));
           @include assert-equal($result, $expected);
         }
       }
@@ -457,12 +475,12 @@
 
     @include test-module('custom media') {
       // @include test('single') {
-      //   $result: bp.query-for-slices((s, l null), $slices: (s: 0, m: 350, l: 800), $media: "monochrome");
+      //   $result: bp.query-for-slices((s, l null), $slices: (s: 0px, m: 350px, l: 800px), $media: "monochrome");
       //   @include assert-equal($result, "monochrome and (max-width: 349px), monochrome and (min-width: 800px)");
       // }
 
       @include test('multiple') {
-        $result: bp.query-for-slices((s, l null), $slices: (s: 0, m: 350, l: 800), $media: (monochrome, speech));
+        $result: bp.query-for-slices((s, l null), $slices: (s: 0px, m: 350px, l: 800px), $media: (monochrome, speech));
         @include assert-equal($result, "monochrome and (max-width: 349px), monochrome and (min-width: 800px), speech and (max-width: 349px), speech and (min-width: 800px)");
       }
     }
@@ -499,7 +517,7 @@
       @include test($case) {
         @include assert {
           @include output {
-            @include bp.query($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+            @include bp.query($case, $slices: (s: 0px, m: 350px, l: 800px, xl: 1050px)) {
               color: red;
             }
           }
@@ -542,7 +560,7 @@
       @include test($case) {
         @include assert {
           @include output {
-            @include bp.between($case..., $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+            @include bp.between($case..., $slices: (s: 0px, m: 350px, l: 800px, xl: 1050px)) {
               color: red;
             }
           }
@@ -585,7 +603,7 @@
       @include test($case) {
         @include assert {
           @include output {
-            @include bp.from($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+            @include bp.from($case, $slices: (s: 0px, m: 350px, l: 800px, xl: 1050px)) {
               color: red;
             }
           }
@@ -628,7 +646,7 @@
       @include test($case) {
         @include assert {
           @include output {
-            @include bp.to($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+            @include bp.to($case, $slices: (s: 0px, m: 350px, l: 800px, xl: 1050px)) {
               color: red;
             }
           }
@@ -671,7 +689,7 @@
       @include test($case) {
         @include assert {
           @include output {
-            @include bp.at($case, $slices: (s: 0, m: 350, l: 800, xl: 1050)) {
+            @include bp.at($case, $slices: (s: 0px, m: 350px, l: 800px, xl: 1050px)) {
               color: red;
             }
           }
