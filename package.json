@@ -1,7 +1,7 @@
 {
   "name": "breakpoint-slicer",
   "title": "Breakpoint Slicer",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0-beta.1",
   "description": "Slice media queries with ease",
   "main": "test.js",
   "author": "Andrey Mikhaylov (lolmaus) <lolmaus@gmail.com>",
