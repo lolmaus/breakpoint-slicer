@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "index" as bp with ($slices: (alpha: 0, beta: 1234, omega: 5678));
+@use "index" as bp with ($slices: (alpha: 0px, beta: 1234px, omega: 5678px));
 @use "node_modules/sass-true/sass/true" as *;
 
 
