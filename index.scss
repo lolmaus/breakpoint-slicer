@@ -420,7 +420,7 @@ $media: null !default;
       @error "Inavlid usage of query-for-slices: it accepts a comma-separated list of items where each item is a number or a space-separated list of two numbers";
     }
 
-    @return query-for-slice($query..., $slices: $slices, $media: $media)
+    @return query-for-slice($slices: $slices, $media: $media, $query...)
   }
 
   @each $slice-or-slices in $query {
@@ -433,7 +433,7 @@ $media: null !default;
     }
 
 
-    $result-item: query-for-slice($slice-or-slices..., $slices: $slices, $media: $media);
+    $result-item: query-for-slice($slices: $slices, $media: $media, $slice-or-slices...);
     $result: "#{$result}#{$result-item}";
   }
 
